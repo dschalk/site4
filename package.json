@@ -1,0 +1,19 @@
+{
+  "name": "app4",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.17",
+    "@sveltejs/kit": "^1.0.0-next.148",
+    "svelte": "^3.34.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.43",
+    "service-worker": "0.0.0"
+  }
+}
