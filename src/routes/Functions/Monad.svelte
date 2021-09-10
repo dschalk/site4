@@ -61,7 +61,7 @@ const  Mona = function Mona ( AR = [],  ar = "name" )  {
 	<title>Basic Monad</title>
 </svelte:head>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
+<div style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
   <p></p>
 BASIC MONAD
 </div>

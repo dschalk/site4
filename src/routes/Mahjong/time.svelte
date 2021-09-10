@@ -345,15 +345,15 @@
 
 
     <style>
-    pre {color: #EEDDFF}
-    img {background-color: white;}
+    <!-- pre {color: #EEDDFF}
+    img {background-color: white;} -->
     </style>
     
     <p></p>
-    <div     style = "font-family: Times New Roman;  text-align: center; color: yellow; font-size: 38px;" transition:fade>
-    Riichi Mahjong Playground
+    <div     style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
+    Riichi Mahjong Tiles
     </div>
-    <p>One thing you can do is prepare to go out, perhaps using the five-block method. If your second click comes before the first click is registered, as indicated below next to "ar69", you might not get the result you want. </p>
+    <p>One thing you can do is prepare to go out, perhaps using the five-block method. If your system is slow, make sure the the first click is registered (shown below in "ar69") before clicking again.</p>
     <div style = "color: #FF0000; text-align: center">
     <span   id = 0 on:click = {() => sky([0, ARR[0]] )}><img src={xyz[ARR[0]]}></span>
     <span   id = 1 on:click = {() => sky([1, ARR[1]] )}><img src={xyz[ARR[1]]}></span>

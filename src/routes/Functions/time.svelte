@@ -349,7 +349,7 @@
     </style>
     
     
-    <div     style = "font-family: Times New Roman;  text-align: center; color: yellow; font-size: 38px;" transition:fade>
+    <div     style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
         <p></p>
     Immutable Data Structures
     </div>

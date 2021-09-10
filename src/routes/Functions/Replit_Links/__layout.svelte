@@ -1,19 +1,15 @@
-
+<p>**************************************************</p>
+<p>**************************************************</p>
 <div >  
 <nav>
-    <ul>
+<ul>
     <li>
-        <a href="/">Home</a>    
+        <a href="/Functions/Replit_Links/powersets">Powersets</a>    
     </li>
 
     <li>
-        <a href="/Functions">Functions</a>
+        <a href="/Functions/Replit_Links/C++_binary_arithmetic">C++ Binary Arithmetic</a>
     </li>
-    
-    <li>
-        <a href="/Mahjong">Riichi Mahjong</a>
-    </li>
-
 </ul>
 </nav>
 </div>
