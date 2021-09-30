@@ -18,7 +18,7 @@
 </nav>
 </div>
 <style>
-.container {margin-right: 100px}
+.container {margin-right: 10px}
 ul {
     display:flex;
     list-style: none;

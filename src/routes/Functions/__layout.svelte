@@ -1,4 +1,3 @@
-<p>  </p>
 <span style = "font-size: 30px">Functions</span>
 <nav>
     <ul>

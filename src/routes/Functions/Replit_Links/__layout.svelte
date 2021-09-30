@@ -1,7 +1,4 @@
-<p>**************************************************</p>
-<p>**************************************************</p>
-<div >  
-<nav>
+<span style = "font-size: 30px">Replit Links</span>
 <ul>
     <li>
         <a href="/Functions/Replit_Links/powersets">Powersets</a>    
@@ -10,11 +7,13 @@
     <li>
         <a href="/Functions/Replit_Links/C++_binary_arithmetic">C++ Binary Arithmetic</a>
     </li>
+
+    <li>
+        <a href="/Functions/Replit_Links/bitwise_primes">Bitwise Computation of Prime Numbers</a>
+    </li>
 </ul>
-</nav>
-</div>
 <style>
-.container {margin-right: 100px}
+.container {margin-right: 10px}
 ul {
     display:flex;
     list-style: none;
@@ -35,5 +34,5 @@ li {margin-right: 10px}
 		background-color: #BBB;    
 	}
 </style>
-<div> </div>
+<br>
 <div class ="container"><slot /></div>

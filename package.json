@@ -7,14 +7,17 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.17",
-    "@sveltejs/kit": "^1.0.0-next.148",
-    "svelte": "^3.34.0"
+    "@sveltejs/adapter-static": "^1.0.0-next.20",
+    "@sveltejs/kit": "^1.0.0-next.178",
+    "svelte": "^3.43.0"
   },
   "type": "module",
   "dependencies": {
-    "@sveltejs/adapter-node": "^1.0.0-next.43",
+    "@sveltejs/adapter-node": "^1.0.0-next.52",
+    "bit-vec": "^1.0.4",
+    "bitview": "^0.1.5",
     "service-worker": "0.0.0",
-    "tailwindcss": "^2.2.9"
+    "tailwindcss": "^2.2.16",
+    "uint1array": "^1.2.0"
   }
 }
