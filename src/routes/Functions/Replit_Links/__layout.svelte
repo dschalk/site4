@@ -8,9 +8,6 @@
         <a href="/Functions/Replit_Links/C++_binary_arithmetic">C++ Binary Arithmetic</a>
     </li>
 
-    <li>
-        <a href="/Functions/Replit_Links/bitwise_primes">Bitwise Computation of Prime Numbers</a>
-    </li>
 </ul>
 <style>
 .container {margin-right: 10px}

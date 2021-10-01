@@ -17,6 +17,10 @@
         </li>
 
 		<li>
+            <a href="/Functions/bitmask_prime_generator">Bitmask Prime Generator</a>
+        </li>
+
+		<li>
             <a href="/Functions/ObjectMonad">Object Monads</a>
         </li>
 

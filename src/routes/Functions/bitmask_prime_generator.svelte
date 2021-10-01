@@ -6,7 +6,7 @@ var A = [];
 
 function set(i) {
   var a = Math.floor(i / 32)
-  var b = i % 32
+  var b = i % 33
   view[a] = view[a] | (1 << b)
 };
 
@@ -48,18 +48,18 @@ var primes = function primes (e) {
 };
 
 var func = `function sieve (N) {
-    A = "";;
-    var max = Math.sqrt(N) + 1
-    for(let i = 2; i < max; i+=1){
-		if(test(i)) {
-            for(let j = 2*i; j < N; j+=i) {
-                set(j);
-            }
-	    }
+  A = "";;
+  var max = Math.sqrt(N) + 1
+  for(let i = 2; i < max; i+=1){
+    if(test(i)) {
+      for(let j = 2*i; j < N; j+=i) {
+        set(j);
+      }
     }
-	for(let i = 2; i < N; i++) {
-		if(test(i)) A = A + i + ", "; //console.log(i);
-    } `;
+  }
+  for(let i = 2; i < N; i++) {
+    if(test(i)) A = A + i + ", "; //console.log(i);
+  } `;
 
 var buffer = `const buf = new ArrayBuffer(50000);
 const view = new Uint32Array(buf)`;
