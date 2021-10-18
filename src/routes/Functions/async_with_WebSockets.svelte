@@ -26,15 +26,19 @@ onMount(() => {
                 }); 
             };
         };
+        var i = 0
         function func ()  {
             let x = socket1.readyState
-            if (x !== 1) {
-                console.log("Repeat");
+            let i = 0;
+            if (i < 15 && x !== 1) {
+                i+=1;
+                console.log("Repeat i", i);
                 setTimeout(() => {
                     func();
                 },500)
             }
             else {
+                i = 0;
                 socket1.send(10000);
                 socket1.onmessage = function(e) {
                     B = e.data;

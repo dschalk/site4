@@ -4,9 +4,6 @@
         <li>
             <a href="/Functions/">Functions Home</a>    
         </li>
-        <li>
-            <a href="/Functions/Monad">Monads_1</a>
-        </li>
 
         <li>
             <a href="/Functions/Monad0">Monads_2</a>
@@ -32,9 +29,8 @@
             <a href="/Functions/async_with_WebSockets">Async With WSS</a>
         </li>
 
-
 		<li>
-            <a href="/Functions/Replit_Links">Replit Links</a>
+            <a href="/Functions/Binary_Operations">Binary Operations</a>
         </li>
     </ul>
 

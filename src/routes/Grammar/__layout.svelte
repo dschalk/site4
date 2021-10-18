@@ -1,11 +1,11 @@
-<span style = "font-size: 30px">Replit Links</span>
+<span style = "font-size: 30px">Grammar</span>
 <ul>
     <li>
-        <a href="/Functions/Replit_Links/powersets">Powersets</a>    
+        <a href="/Grammar/">Home</a>    
     </li>
 
     <li>
-        <a href="/Functions/Replit_Links/C++_binary_arithmetic">C++ Binary Arithmetic</a>
+        <a href="/Grammar/Niether of us (has or have)">Niether of us (has or have)</a>
     </li>
 
 </ul>
@@ -32,4 +32,6 @@ li {margin-right: 10px}
 	}
 </style>
 <br>
-<div class ="container"><slot /></div>
+<div class ="container"></div>
+<slot></slot>
+

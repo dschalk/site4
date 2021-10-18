@@ -1,26 +1,18 @@
-
-<div>  
-<nav>
-    <ul>
+<span style = "font-size: 30px">Binary Operations</span>
+<ul>
     <li>
-        <a href="/">Home</a>    
+        <a href="/Functions/Binary_Operations/">Home</a>    
     </li>
 
     <li>
-        <a href="/Functions">Functions</a>
-    </li>
-    
-    <li>
-        <a href="/Mahjong">Riichi Mahjong</a>
+        <a href="/Functions/Binary_Operations/powersets">Powersets</a>    
     </li>
 
     <li>
-        <a href="/Grammar">Grammar</a>
+        <a href="/Functions/Binary_Operations/binary_arithmetic">Binary Arithmetic</a>
     </li>
 
 </ul>
-</nav>
-</div>
 <style>
 .container {margin-right: 10px}
 ul {
@@ -43,5 +35,5 @@ li {margin-right: 10px}
 		background-color: #BBB;    
 	}
 </style>
-<div> </div>
+<br>
 <div class ="container"><slot /></div>
