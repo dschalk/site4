@@ -18,6 +18,10 @@
         </li>
 
 		<li>
+            <a href="/Functions/factors">Prime Factors</a>
+        </li>
+
+		<li>
             <a href="/Functions/ObjectMonad">Object Monads</a>
         </li>
 

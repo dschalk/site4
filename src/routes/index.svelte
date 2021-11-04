@@ -1,6 +1,9 @@
-
 <style>
     :global(p) {text-indent: 3%;}
+    :global(html) {background-color: rgb(32,0,0);}
+    :global(body) {background-color: papayawhip;}
+    :global(p) {font-size: 20px;}
+    :global(a) {font-size: 20px;}
 </style>
 
 <h1>Home</h1>
