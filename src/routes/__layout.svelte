@@ -36,12 +36,14 @@ li {margin-right: 10px}
 		margin-left:15%;
 		padding-right:3%;
 		padding-left: 3%;
-		background-color: #DDD;
+		background-color: papayawhip;
 	}
-		:global(html) {
-		/* this will apply to <body> */
-		background-color: #BBB;    
-	}
+    :global(p) {text-indent: 3%;}
+    :global(html) {background-color: rgb(32,0,0);}
+    :global(body) {background-color: papayawhip;}
+    :global(p) {font-size: 20px;}
+    :global(a) {font-size: 20px;}
+	
 </style>
 <div> </div>
 <div class ="container"><slot /></div>

@@ -79,7 +79,52 @@ function test (ar,i) {
   return value === 0;
 }`;
 
+let N2 = 1;
+let ar2 = [];
+
+var first2 = function first (e) {
+    ar2 = [];
+    if (e.keyCode == 13) {
+        let num = parseInt(e.target.value);
+        main2(num);
+    };
+};
+
+function main2 (n) {
+    if (n === 1) return;
+    N2 = n;
+    for(let i = 2; i <= N2; i+=1){
+        while (N2 % i === 0) {
+            ar2.push(" " + i);
+            N2 = N2 / i;
+            if (N2 == 1) return
+        }
+    }
+};
+var code = `let N2 = 1;
+let ar2 = [];
+
+var first2 = function first (e) {
+    ar2 = [];
+    if (e.keyCode == 13) {
+        let num = parseInt(e.target.value);
+        main2(num);
+    };
+};
+
+function main2 (n) {
+    if (n === 1) return;
+    N2 = n;
+    for(let i = 2; i <= N2; i+=1){
+        while (N2 % i === 0) {
+            ar2.push(" " + i);
+            N2 = N2 / i;
+            if (N2 == 1) return
+        }
+    }
+}`;
 </script>
+
 <style>
     input {
         margin-left: 5%;
@@ -98,7 +143,12 @@ function test (ar,i) {
 <input type="text" on:keydown={first} />
 <br>
 <h3 class = "marg">{ar}</h3>
-<p>This is just a little experiment in decomposing numbers into their prime factors without relying on the the modulo operator "%" or explicitely generating prime numbers. I haven't benchmarked it against traditional methods, but I doubt that it is more efficient. </p>
+<p>This is just a little experiment in decomposing numbers into their prime factors without relying on the the modulo operator "%" or explicitely generating prime numbers.</p>
 <p>This is in script tags:</p>
 <pre>{display_main}</pre> 
-<br><br><br>
+<p>Enter a number between 2 and a quadrillion.</p>
+<input type="text" on:keydown={first2} />
+<h3 class = "marg">{ar2}</h3>;
+<p>The function main2 is clearly far superior to main (above). As the target gets bigger, it quickly leaves main struggling or crashing in its dust.</p>
+<p>Here's the code:</p>
+<pre>{code}</pre>
