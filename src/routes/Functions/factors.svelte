@@ -91,7 +91,6 @@ var first2 = function first (e) {
 };
 
 function main2 (n) {
-    if (n === 1) return;
     N2 = n;
     for(let i = 2; i <= N2; i+=1){
         while (N2 % i === 0) {
@@ -113,7 +112,6 @@ var first2 = function first (e) {
 };
 
 function main2 (n) {
-    if (n === 1) return;
     N2 = n;
     for(let i = 2; i <= N2; i+=1){
         while (N2 % i === 0) {
@@ -146,7 +144,7 @@ function main2 (n) {
 <p>This is just a little experiment in decomposing numbers into their prime factors without relying on the the modulo operator "%" or explicitely generating prime numbers.</p>
 <p>This is in script tags:</p>
 <pre>{display_main}</pre> 
-<p>Enter a number between 2 and a quadrillion.</p>
+<p>Enter a number between 2 and a quintillion.</p>
 <input type="text" on:keydown={first2} />
 <h3 class = "marg">{ar2}</h3>;
 <p>The function main2 is clearly far superior to main (above). As the target gets bigger, it quickly leaves main struggling or crashing in its dust.</p>
