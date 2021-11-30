@@ -92,7 +92,8 @@ var first2 = function first (e) {
 
 function main2 (n) {
     N2 = n;
-    for(let i = 2; i <= N2; i+=1){
+    var top = n+1;
+    for(let i = 2; i < top; i+=1){
         while (N2 % i === 0) {
             ar2.push(" " + i);
             N2 = N2 / i;
@@ -129,6 +130,10 @@ function main2 (n) {
         size: 16px;
         font-size: 22px;
     }
+    .big {
+        font-size: 25;
+        font-weight: 700;
+    }
     .marg {
         margin-left: 5%;
         font-size: 22px;    
@@ -136,17 +141,21 @@ function main2 (n) {
     p {font-size: 24px}
     pre {font-size: 22px}
 </style>
-<br><br>
-<p>Enter a number between 2 and not much greater than a billion.</p>
+<p class = "big">Efficient Algorithm</p>
+<p>Enter a number between 2 and a few <span class = "big">quadrillion</span><span>.</span></p>
+<input type="text" on:keydown={first2} />
+<h3 class = "marg">{ar2}</h3>
+<p class = "big">Inefficient Algorithm</p>
+<p>Just for fun, I tried finding factors using bitwise operators instead of "%", the modulo operater. The Google Chrome engine processed it very slowly.</p>
+<p>Enter a number between 2 and not much greater than a <span class = "big">billion</span><span>.</span></p>
+
 <input type="text" on:keydown={first} />
+
 <br>
 <h3 class = "marg">{ar}</h3>
-<p>This is just a little experiment in decomposing numbers into their prime factors without relying on the the modulo operator "%" or explicitely generating prime numbers.</p>
-<p>This is in script tags:</p>
-<pre>{display_main}</pre> 
-<p>Enter a number between 2 and a quintillion.</p>
-<input type="text" on:keydown={first2} />
-<h3 class = "marg">{ar2}</h3>;
-<p>The function main2 is clearly far superior to main (above). As the target gets bigger, it quickly leaves main struggling or crashing in its dust.</p>
-<p>Here's the code:</p>
+
+<p>Here's the code for the more efficient, modulo-operator algorithm:</p>
 <pre>{code}</pre>
+<p>This is the code for the bitwise-operator algorithm:</p>
+<pre>{display_main}</pre> 
+<a href = "http://score.schalk.site:3055">Game of Score</a>

@@ -16,7 +16,10 @@
 <h3>Some Thoughts about Functional Programming</h3>
 <p>"Functional programming is an approach to programming based on function calls as the primary programming construct." - Greg Michaelson on Page 3 of An Introduction to Functional Programming Through Lambda Calculus.</p>
 
-<p>I created this site to share my enthusiasm for JavaScript functions, and especially for the recursive closures I call "monads". But most of what people think of as "functional programming", with the cumbersom rules and constraints that go with it, I consider less than useless.</p>
+<p>I created this site to share my enthusiasm for JavaScript functions, and especially for the recursive closures I call "monads". But most of what people think of as "functional programming", with the cumbersom rules and constraints that go with it, I consider less than useless in the JavaScript modules you'll find on this site. </p>
+
+<p>I'm still very fond of Haskell. Here's a rather elaborate Haskell WebSockets server I developed seven or eight years ago. It needs some cosmetic sprucing up, but I think you will find that it functions as intended. I noticed that the rules of the Game of Score are missing right now. If you want to check out the multi-player simulated dice game, click Group A or Group B or make up a group name. Click "refresh" whenever it is available, then click "Roll". You get a point for making the number 20 in at least two computations. Here's a link:</p>
+<a href = "https://score.schalk.site">Game of Score</a>
 
 <p> It's such a joy, in the safety of small, isolated modules, to have the internal workings of a function rely on and mutate global variables - even variables that were not provided as arguments. When your functions don't have to be pure; for example, when you are free to define functions that return results only on every third, fourth, or whatever execution, JavaScript becomes more flexible and powerful. These sorts of things can be done safely in small, isolated modules.   </p>
 
