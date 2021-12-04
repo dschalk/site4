@@ -28,14 +28,15 @@
 		<li>
             <a href="/Functions/time">Time Travel</a>
         </li>
+        
+		<li>
+            <a href="/Functions/score">Score</a>
+        </li>
 
 		<li>
             <a href="/Functions/async_with_WebSockets">Async With WSS</a>
         </li>
 
-		<li>
-            <a href="/Functions/Binary_Operations">Binary Operations</a>
-        </li>
     </ul>
 
 </nav>

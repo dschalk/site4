@@ -1,6 +1,10 @@
+<script>
+import { compute_rest_props } from "svelte/internal";
+
+</script>
 <h2>Introduction</h2>
 
-<p>This website is built on the SvelteKit framework. It's located on a Digital Ocean droplet. The the <a href = "Functions/async_with_WebSockets">async_with_Websockets</a> page is supported by two WebSockets servers on a separate Digital Ocean droplet.</p>
+<p>This website is built on the SvelteKit framework. It's located on a Digital Ocean droplet. The <a href = "Functions/async_with_WebSockets">async_with_Websockets</a> page is supported by two WebSockets servers on a separate Digital Ocean droplet.</p>
 
 <p>Svelte modules look a lot like ordinary HTML pages, with JavaScript inside of script tags and CSS in style tags. Svelte adds features to facilitate reactivity and animation, among other things. They are few and the official tutorials make it convenient to start using them right away.</p>
 
@@ -18,8 +22,11 @@
 
 <p>I created this site to share my enthusiasm for JavaScript functions, and especially for the recursive closures I call "monads". But most of what people think of as "functional programming", with the cumbersom rules and constraints that go with it, I consider less than useless in the JavaScript modules you'll find on this site. </p>
 
-<p>I'm still very fond of Haskell. Here's a rather elaborate Haskell WebSockets server I developed seven or eight years ago. It needs some cosmetic sprucing up, but I think you will find that it functions as intended. I noticed that the rules of the Game of Score are missing right now. If you want to check out the multi-player simulated dice game, click Group A or Group B or make up a group name. Click "refresh" whenever it is available, then click "Roll". You get a point for making the number 20 in at least two computations. Here's a link:</p>
-<a href = "https://score.schalk.site">Game of Score</a>
+<p>I still have bits and pieces of code for a fairly elaborate Haskell backend to an application I developed in 2013 and maintained for a while. It's a simulated dice game based on a game my young son learned in school. I'll provide a link to a working example and you can compare it with the Haskell code if you're interested. The drag & drop boxes are too big, the buttons could be better arranged, and the rules are missing. Maybe I'll spruce it up someday. The Haskell code and bare-bone rules are here:</p> <a href = "../Functions/score">Haskell Code</a>
+    
+<p>The rules of the Game of Score are missing right now. If you want to check out the multi-player simulated dice game, click Group A or Group B or make up a group name. Click "refresh" whenever it is available, then click "Roll". You get a point for making the number 20 in at least two computations.</p> 
+
+<p>Almost all Internet traffic to and from the "schalk.site" Digitalocean droplet is encrypted. The "Game of Score" is the only exception. The best way to load it in a browser is to navegate to <a href = "https://score.schalk.site">http://score.schalk.site</a> and click the link.   </p>
 
 <p> It's such a joy, in the safety of small, isolated modules, to have the internal workings of a function rely on and mutate global variables - even variables that were not provided as arguments. When your functions don't have to be pure; for example, when you are free to define functions that return results only on every third, fourth, or whatever execution, JavaScript becomes more flexible and powerful. These sorts of things can be done safely in small, isolated modules.   </p>
 
