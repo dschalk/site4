@@ -26,7 +26,7 @@ import { compute_rest_props } from "svelte/internal";
     
 <p>The rules of the Game of Score are missing right now. If you want to check out the multi-player simulated dice game, click Group A or Group B or make up a group name. Click "refresh" whenever it is available, then click "Roll". You get a point for making the number 20 in at least two computations.</p> 
 
-<p>Almost all Internet traffic to and from the "schalk.site" Digitalocean droplet is encrypted. The "Game of Score" is the only exception. The best way to load it in a browser is to navegate to <a href = "https://score.schalk.site">http://score.schalk.site</a> and click the link.   </p>
+<p>Almost all Internet traffic to and from the "schalk.site" Digitalocean droplet is encrypted. The "Game of Score" is the only exception. The best way to load it in a browser is to navegate to <a href = "https://game.schalk.site">http://game.schalk.site</a> and click the link.   </p>
 
 <p> It's such a joy, in the safety of small, isolated modules, to have the internal workings of a function rely on and mutate global variables - even variables that were not provided as arguments. When your functions don't have to be pure; for example, when you are free to define functions that return results only on every third, fourth, or whatever execution, JavaScript becomes more flexible and powerful. These sorts of things can be done safely in small, isolated modules.   </p>
 

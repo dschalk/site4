@@ -747,13 +747,13 @@ var all = `[1,1,1,4]
   <p></p>
 The Game of Score
 </div>
-<p>This page displays the Haskell programming language code that can display unique simulated rolls of the dice and keep score in each of arbitrarily many groups of people playing and chatting among themselves. It can display every possible way a roll of dice -- two six-sided, one twelve-sided and one twenty-sided by default-- can produce the number 20 through addition, subtraction, multiplication, division, and concatination. You can see it in action at <a href = "https://score.schalk.site">The Game of Score</a></p>
+<p>This page displays the Haskell programming language code that can display unique simulated rolls of the dice and keep score in each of arbitrarily many groups of people playing and chatting among themselves. It can display every possible way a roll of dice -- two six-sided, one twelve-sided and one twenty-sided by default-- can produce the number 20 through addition, subtraction, multiplication, division, and concatination. You can see it in action at <a href = "https://game.schalk.site">The Game of Score</a></p>
 
 <p> Main.hs, the center of the WebSockets back end, imports whole packages when all it needs is one or two of the functions they contain. It and its helper modules aren't annotated. The JavaScript front end is build on React, a framework I abandoned long ago. It too could use some refactoring, or else re-writing in this SvelteKit framework. I won't let sprucing up the Game of Score interfere with other things I'm doing right now, but maybe later.</p>
 <p>The work I did was for my young son Alex, a little grade school boy back then. He's twenty-years-old now.</p>
 
 <p> I admit I'm pretty sentimental about this game. I remember Alex's asking me if I could compute all possible solutions to all possible rolls of the dice. I said I didn't think so, but then I did it, more to my surprise than Alex's. Then I computed the short list of rolls that couldn't make the number 20, the "impossibles" (bellow). All of this is preserved at Github.com at <a href="https://github.com/dschalk/score3">score3</a>.</p>
- 
+    
 <pre>{Main}</pre>
 <br>
 <p>This module, among other things, computes any solutions that exist to any particular roll of the four die.</p>
