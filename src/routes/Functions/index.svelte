@@ -23,7 +23,8 @@ import { compute_rest_props } from "svelte/internal";
 <p>I created this site to share my enthusiasm for JavaScript functions, and especially for the recursive closures I call "monads". But most of what people think of as "functional programming", with the cumbersom rules and constraints that go with it, I consider less than useless in the JavaScript modules you'll find on this site. </p>
 
 <p>I still have bits and pieces of code for a fairly elaborate Haskell backend to an application I developed in 2013 and maintained for a while. It's a simulated dice game based on a game my young son learned in school. I'll provide a link to a working example and you can compare it with the Haskell code if you're interested. The drag & drop boxes are too big, the buttons could be better arranged, and the rules are missing. Maybe I'll spruce it up someday. The Haskell code and bare-bone rules are here:</p> <a href = "../Functions/score">Haskell Code</a>
-    
+    <br>
+    <a href = "../Book/__Motion-to-clarify">Motion</a>
 <p>The rules of the Game of Score are missing right now. If you want to check out the multi-player simulated dice game, click Group A or Group B or make up a group name. Click "refresh" whenever it is available, then click "Roll". You get a point for making the number 20 in at least two computations.</p> 
 
 <p>Almost all Internet traffic to and from the "schalk.site" Digitalocean droplet is encrypted. The "Game of Score" is the only exception. The best way to load it in a browser is to navegate to <a href = "https://game.schalk.site">http://game.schalk.site</a> and click the link.   </p>

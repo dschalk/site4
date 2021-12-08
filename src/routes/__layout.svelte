@@ -18,6 +18,10 @@
         <a href="/Grammar">Grammar</a>
     </li>
 
+    <li>
+        <a href="/Law">Rule By Law</a>
+    </li>
+
 </ul>
 </nav>
 </div>
@@ -27,7 +31,7 @@ ul {
     display:flex;
     list-style: none;
     margin: 0;
-    font-size: 14px;
+    font-size: 11px;
 }
 li {margin-right: 10px}
 		:global(body) {

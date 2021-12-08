@@ -17,6 +17,7 @@
     "bit-vec": "^1.0.4",
     "bitview": "^0.1.5",
     "service-worker": "0.0.0",
+    "svelte-pdf": "^1.0.9",
     "tailwindcss": "^2.2.16",
     "uint1array": "^1.2.0"
   }
