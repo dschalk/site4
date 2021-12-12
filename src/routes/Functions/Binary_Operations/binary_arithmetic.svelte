@@ -1,5 +1,5 @@
 <script>
-    import AsyncMonad from "../Async_monad.svelte";
+    import AsyncMonad from "../Monads/Async_monad.svelte";
 import BitmaskPrimeGenerator from "../bitmask_prime_generator.svelte";
     var sieve =  `function sieve (N) {
     var buf = new ArrayBuffer(1.1 * Math.ceil(N/8));

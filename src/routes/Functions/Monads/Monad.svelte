@@ -66,14 +66,8 @@ const  Mona = function Mona ( AR = [],  ar = "name" )  {
 BASIC MONAD
 </div>
 <br>
-<div class = tai>In functional programming, a monad is a design pattern[1] that allows structuring programs generically while automating away boilerplate code needed by the program logic. Monads achieve this by providing their own data type (a particular type for each type of monad), which represents a specific form of computation, along with one procedure to wrap values of any basic type within the monad (yielding a monadic value) and another to compose functions that output monadic values (called monadic functions).</div>
-<br>
 
-<div class = tai>This allows monads to simplify a wide range of problems, like handling potential undefined values (with the Maybe monad), or keeping values within a flexible, well-formed list (using the List monad). With a monad, a programmer can turn a complicated sequence of functions into a succinct pipeline that abstracts away auxiliary data management, control flow, or side-effects. </div>
-<span> -- https://en.wikipedia.org/wiki/Monad_(functional_programming)</span>
-
-<p>That is spot on with respect to the Haskell programming language; and to a large extent, it describes the monads I'll define in this module. The main difference concerns the pattern described in the second sentence of of the first paragraph: "Monads achieve this by providing their own data type . . .". </p>
-<p>Forcing JavaScript to adhere to strict typing rules probably helps large development teams speed up the process of getting large, complicated applications into production. It might also be soothing to people who feel secure in highly structured environments. But here, in this application, insisting on data types and having monads "lift" from one type to another would entail overhead while providing little or no value. </p>
+<p>Forcing JavaScript to adhere to strict typing rules probably helps large development teams speed up the process of getting large, complicated applications into production. It might also be soothing to people who feel secure in highly structured environments. But here, we let JavaScript shine with only a few, common-sense rules such as, "make the code easy for future maintainers to understand"  and "each global variable is to be altered by no more than one function." </p>
 <p>That doesn't mean there is a dearth of variety. As you will see in later modules, there's a monad that handles data from a WebSocket server and a Web Worker, one that handles Promises, another that serves as a transducer, and so on.  </p>
 <p>Here's a basic design pattern; it's the definition of a very simple monad:</p>
 <pre>{monad}</pre>

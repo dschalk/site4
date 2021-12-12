@@ -58,7 +58,7 @@ Quadratic Formula
 </div>>
 <h2>Functional Programming Paradigm Ignored</h2>
 
- <p>Some Haskell programmers behave like dour monks in an austere monistary, always ready to downvote advice that deviates from Haskell's "no side effects, no mutations" ethos. Some fanatical functional JavaScript coders won't even mutate variables confined entirely to function scope. If they lighten up and pay attention, they might learn something. </p>
+ <p>Some Haskell programmers behave like dour monks in an austere monistary, always ready to downvote advice that deviates from Haskell's "no side effects, no mutations" ethos. Some fanatical functional JavaScript coders won't even mutate variables confined entirely in function scope. To them I say, JavaScript really shines in small isolated modules where global variables present no danger, imposing types is unnecessary, and functions don't have to  </p>
 
 <p>What follows is certainly not the best way to solve quadratic equations. It shows that a programmer who relies on functions more than classes, or the ersatz "classes" introduced in ES2016, can use </p>
 

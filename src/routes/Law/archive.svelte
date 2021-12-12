@@ -1,4 +1,6 @@
+
 <script>
+/*import { action_destroyer, invalid_attribute_name_character, not_equal } from "svelte/internal"; */
 import {fade} from "svelte/transition"
 let visible = true;
 </script>
@@ -6,9 +8,8 @@ let visible = true;
  {#if visible}
  	<div style = "font-family: Times New Roman; text-align:center; font-size: 32px;" transition:fade>
      <p></p>
-Rule By Law
+     Document Archive
  	</div>
  {/if}
- <br> 
-
- <p> <a href = "Law/law">Link</a> </p>
+ <br>
+<a href = "https://one.schalk.site">Archive</a>

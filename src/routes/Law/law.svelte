@@ -1,5 +1,5 @@
 <script>
-import { action_destroyer, invalid_attribute_name_character, not_equal } from "svelte/internal";
+/*import { action_destroyer, invalid_attribute_name_character, not_equal } from "svelte/internal"; */
 import {fade} from "svelte/transition"
 import Chun from '../images/Chun.svg';
 let visible = true;

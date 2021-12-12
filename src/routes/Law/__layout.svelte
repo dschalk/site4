@@ -8,6 +8,10 @@
         <li>
             <a href="/Law/law">Law</a>
         </li>
+        
+        <li>
+            <a href="/Law/archive">Archive</a>
+        </li>
 
         <li>
             <a href="/Law/chapter-1">Chapter 1</a>
