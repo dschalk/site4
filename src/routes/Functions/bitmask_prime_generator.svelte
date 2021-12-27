@@ -5,6 +5,8 @@ var B = 0;
 var C = 0;
 var aa = `1<<10`;
 var bb = `1<<11`;
+    
+import {fade} from "svelte/transition";
 
 function sieve (N) {
     var buf = new ArrayBuffer(1.1 * Math.ceil(N/8));
@@ -85,6 +87,10 @@ function test (ar,i) {
 }`;
 
 </script>
+<div style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
+    <br>
+  Using ArrayBuffer With the Sieve of Eratosthenes
+</div>
 
 <h3>Efficient Generation of Prime Numbers</h3>
 <span>Enter a number less than five million (no commas). If the number is larger than 10,000, results at the beginning and at the end will be displayed. Otherwise, rendering a large number of primes and scrolling all the way to the bottom to see the result might require time you would prefer to spend on better things.    </span>

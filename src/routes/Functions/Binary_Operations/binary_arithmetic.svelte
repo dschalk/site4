@@ -1,12 +1,12 @@
 <script>
     import AsyncMonad from "../Monads/Async_monad.svelte";
-import BitmaskPrimeGenerator from "../bitmask_prime_generator.svelte";
+    import BitmaskPrimeGenerator from "../bitmask_prime_generator.svelte";
     var sieve =  `function sieve (N) {
     var buf = new ArrayBuffer(1.1 * Math.ceil(N/8));
     var view = new Uint8Array(buf);`
 </script>
 
-Just for fun, I made a C++ demonstration that adds and subtracts binary numbers using elementary elementary arithmetic. Here it is: 
+Just for fun, I made a C++ demonstration that adds and subtracts binary numbers using elementary arithmetic. Here it is: 
 <iframe frameborder="0" width="80%" height="500px" src="https://replit.com/@DavidSchalk1/Binary-Addition-Using-Arithmetic?lite=true"></iframe>
 <p>This does the same thing only more elegantly, using using bitwise operators:</p>
 <iframe frameborder="0" width="80%" height="500px" src="https://replit.com/@DavidSchalk1/Binary-Addition-Using-Bitwise-Operators?lite=true"></iframe>

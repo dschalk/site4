@@ -33,10 +33,6 @@
         </li>
 
         <li>
-            <a href="/Functions/Monads/Promises_Monad">Promises Monad</a>
-        </li>
-
-        <li>
             <a href="/Functions/Monads/Async_monad">Async Monad</a>
         </li>
 

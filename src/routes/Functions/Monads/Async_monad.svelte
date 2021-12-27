@@ -1,25 +1,27 @@
 <script>
+import {fade} from "svelte/transition";
+
 import { onMount } from 'svelte';
 let A = 10000;
 let B = 10000;
 let C = 10000;
 let D = 10000;
 let E = "Enter the number in the text box to see the result.";
-var socket1, socket2, handleKeydown1, handleKeydown2;
+var socket3, socket2, handleKeydown1, handleKeydown2;
 
 onMount(() => {
-    socket1 = new WebSocket('wss://schalk.site:3002');
-    socket2 = new WebSocket('wss://schalk.site:3003');
+    socket3 = new WebSocket('wss://schalk.site:3003');
+    socket2 = new WebSocket('wss://schalk.site:3002');
     function start () {
         handleKeydown1 = function handleKeydown1 (e) {
             if (e.keyCode == 13) {
                 A = e.target.value;
-                socket1.send(e.target.value);
-                socket1.addEventListener('message', function (e) {
+                socket2.send(e.target.value);
+                socket2.addEventListener('message', function (e) {
                     B = e.data;
                     D = e.data;
-                    socket2.send(e.data);
-                    socket2.onmessage = function (e) {
+                    socket3.send(e.data);
+                    socket3.onmessage = function (e) {
                         C = e.data;
                         E = e.data;
                     }
@@ -28,7 +30,7 @@ onMount(() => {
         };
         var i = 0
         function func ()  {
-            let x = socket1.readyState
+            let x = socket2.readyState
             let i = 0;
             if (i < 15 && x !== 1) {
                 i+=1;
@@ -39,12 +41,12 @@ onMount(() => {
             }
             else {
                 i = 0;
-                socket1.send(10000);
-                socket1.onmessage = function(e) {
+                socket2.send(10000);
+                socket2.onmessage = function(e) {
                     B = e.data;
                     D = e.data;
-                    socket2.send(e.data);
-                    socket2.onmessage = function (e) {
+                    socket3.send(e.data);
+                    socket3.onmessage = function (e) {
                         C = e.data;
                         E = e.data;
                     }
@@ -55,9 +57,9 @@ onMount(() => {
         handleKeydown2 = function handleKeydown2 (e) {
             if (e.keyCode !== 13) {console.log("e.keyCode isn't 'Enter'")}
             else if (e.keyCode == 13) {
-                socket2.send(e.target.value);
+                socket3.send(e.target.value);
                 D = e.target.value;
-                socket2.onmessage = function (e) {
+                socket3.onmessage = function (e) {
                     E = e.data;
                     B = E;
                 };
@@ -68,39 +70,43 @@ onMount(() => {
 });
 
 let code = `onMount(() => {
-    socket1 = new WebSocket('wss://schalk.site:3002');
-    socket2 = new WebSocket('wss://schalk.site:3003');
+    socket3 = new WebSocket('wss://schalk.site:3003');
+    socket2 = new WebSocket('wss://schalk.site:3002');
     function start () {
         handleKeydown1 = function handleKeydown1 (e) {
             if (e.keyCode == 13) {
                 A = e.target.value;
-                socket1.send(e.target.value);
-                socket1.addEventListener('message', function (e) {
+                socket2.send(e.target.value);
+                socket2.addEventListener('message', function (e) {
                     B = e.data;
                     D = e.data;
-                    socket2.send(e.data);
-                    socket2.onmessage = function (e) {
+                    socket3.send(e.data);
+                    socket3.onmessage = function (e) {
                         C = e.data;
                         E = e.data;
                     }
                 }); 
             };
         };
+        var i = 0
         function func ()  {
-            let x = socket1.readyState
-            if (x !== 1) {
-                console.log("Repeat");
+            let x = socket2.readyState
+            let i = 0;
+            if (i < 15 && x !== 1) {
+                i+=1;
+                console.log("Repeat i", i);
                 setTimeout(() => {
                     func();
                 },500)
             }
             else {
-                socket1.send(10000);
-                socket1.onmessage = function(e) {
+                i = 0;
+                socket2.send(10000);
+                socket2.onmessage = function(e) {
                     B = e.data;
                     D = e.data;
-                    socket2.send(e.data);
-                    socket2.onmessage = function (e) {
+                    socket3.send(e.data);
+                    socket3.onmessage = function (e) {
                         C = e.data;
                         E = e.data;
                     }
@@ -111,9 +117,9 @@ let code = `onMount(() => {
         handleKeydown2 = function handleKeydown2 (e) {
             if (e.keyCode !== 13) {console.log("e.keyCode isn't 'Enter'")}
             else if (e.keyCode == 13) {
-                socket2.send(e.target.value);
+                socket3.send(e.target.value);
                 D = e.target.value;
-                socket2.onmessage = function (e) {
+                socket3.onmessage = function (e) {
                     E = e.data;
                     B = E;
                 };
@@ -121,7 +127,7 @@ let code = `onMount(() => {
         };
     }
     start();
-}); `;
+});`;
 var soc1 = `var ws = require('ws');
 var https = require('https');
 var fs = require('fs');
@@ -218,7 +224,7 @@ let B = 10000;
 let C = 10000;
 let D = 10000;
 let E = "Enter the number in the text box to see the result.";
-var socket1, socket2, handleKeydown1, handleKeydown2; `;
+var socket3, socket2, handleKeydown1, handleKeydown2; `;
 var html = `<h3>Enter the upper limit for a pseudo-random number:</h3>
 <input type="text" on:keydown={handleKeydown1} />
 <br>
@@ -226,6 +232,11 @@ var html = `<h3>Enter the upper limit for a pseudo-random number:</h3>
 <br>
 <p>The prime factors of {D} are {E}.</p> `;
 </script>
+
+<div style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
+    <br>
+  Two Asynchronous Functions    
+</div>
 <h3>Enter the upper limit for a pseudo-random number:</h3>
 <input type="text" on:keydown={handleKeydown1} />
 <br>
@@ -240,7 +251,7 @@ Here's how the script begins:
 <pre>{code}</pre>
 <p>Here's the HTML:</p>
 <pre>{html}</pre>
-<p>The code isn't annotated, but the key to understanding it is that socket1 returns a pseudo-prine number and socket2 returns the prime factors of the integer it receives. The purpose of this page is to show one way of using WebSockets in SvelteKit. </p>
+<p>The code isn't annotated, but the key to understanding it is that socket3 returns a pseudo-random number and socket2 returns the prime factors of the integer it receives. The purpose of this page is to show one way of using WebSockets in SvelteKit. </p>
 <p>The WebSocket servers run on a droplet separate from the droplet hosting schalk.net. They're on a droplet that services traffic destined for schalk.site. Connections to the servers can be established with, for example, "var sock = new WebSocket('wss://schalk.site')". It's striking how fast WebSockets traffic moves between Digitalocean droplets on the East Coast. </p>
 <p>Here's the code for the random number server:</p>
 <pre>{soc1}</pre>

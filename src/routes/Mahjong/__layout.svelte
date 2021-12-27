@@ -11,10 +11,6 @@
         </li>
 
 		<li>
-            <a href="/Mahjong/time">Set up five blocks</a>
-        </li>
-		
-		<li>
             <a href="/Mahjong/yaku">yaku</a>
         </li>
     </ul>

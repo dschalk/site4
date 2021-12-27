@@ -25,29 +25,29 @@
 </ul>
 </nav>
 </div>
+
 <style>
-.container {margin-right: 10px}
-ul {
+  .container {margin-right: 10px}
+  ul {
     display:flex;
     list-style: none;
     margin: 0;
     font-size: 11px;
-}
-li {margin-right: 10px}
-		:global(body) {
-		/* this will apply to <body> */
-		margin-right: 12%;
-		margin-left:15%;
-		padding-right:3%;
-		padding-left: 3%;
-		background-color: papayawhip;
-	}
-    :global(p) {text-indent: 3%;}
-    :global(html) {background-color: rgb(32,0,0);}
-    :global(body) {background-color: papayawhip;}
-    :global(p) {font-size: 20px;}
-    :global(a) {font-size: 20px;}
-	
+  }
+  li {margin-right: 10px}
+
+  :global(body) {
+	margin-right: 12%;
+	margin-left:12%;
+	padding-right:3%;
+	padding-left: 3%;
+	background-color: papayawhip;
+  }
+  :global(p) {text-indent: 3%;}
+  :global(html) {background-color: rgb(32,0,0);}
+  :global(body) {background-color: papayawhip;}
+  :global(p) {font-size: 20px;}
+  :global(a) {font-size: 20px;}
 </style>
 <div> </div>
 <div class ="container"><slot /></div>

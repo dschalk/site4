@@ -1,6 +1,11 @@
 <br>
 <div style = "font-size: 26px">Functions</div>
-<style>
+<style> 
+    .large {
+        font-size:24px; 
+        color:purple; 
+        font-weight: 6;
+    }
     ul {
         display:flex;
         list-style: none;
@@ -20,6 +25,10 @@
             <a href="/Functions/">Home</a>    
         </li>
 
+        <li>
+            <a href="/Functions/haskell">Haskell</a>    
+        </li>
+
       	<li>
             <a href="/Functions/bitmask_prime_generator">Primes</a>
         </li>
@@ -33,17 +42,13 @@
         </li>
 
         <li>
-            <a href="/Functions/Monads">Monads</a>
+            <a class = large href="/Functions/Monads">Monads</a>
         </li>
 
         <li>
-            <a href="/Functions/Binary_Operations">Binary</a>
+            <a class=large href="/Functions/Binary_Operations">Binary</a>
         </li>
 
-		<li>
-            <a href="/Functions/time">Reverse</a>
-        </li>
-        
 		<li>
             <a href="/Functions/score">Score</a>
         </li>

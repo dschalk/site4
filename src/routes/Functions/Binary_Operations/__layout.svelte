@@ -5,10 +5,6 @@
     </li>
 
     <li>
-        <a href="/Functions/Binary_Operations/powersets">Powersets</a>    
-    </li>
-
-    <li>
         <a href="/Functions/Binary_Operations/binary_arithmetic">Binary Arithmetic</a>
     </li>
 

@@ -1,10 +1,9 @@
 <script>
-import { compute_rest_props } from "svelte/internal";
-
+    import {fade} from "svelte/transition";
 </script>
 <h2>Introduction</h2>
 
-<p>This website is built on the SvelteKit framework. It's located on a Digital Ocean droplet. The <a href = "Functions/async_with_WebSockets">async_with_Websockets</a> page is supported by two WebSockets servers on a separate Digital Ocean droplet.</p>
+<p>This website is built on the SvelteKit framework. It's located on a Digital Ocean droplet. The <a href = "Functions/Monads/Async_monad">async_with_Websockets</a> page is supported by two WebSockets servers on a separate Digital Ocean droplet.</p>
 
 <p>Svelte modules look a lot like ordinary HTML pages, with JavaScript inside of script tags and CSS in style tags. Svelte adds features to facilitate reactivity and animation, among other things. They are few and the official tutorials make it convenient to start using them right away.</p>
 
@@ -27,7 +26,7 @@ import { compute_rest_props } from "svelte/internal";
     <a href = "../Book/__Motion-to-clarify">Motion</a>
 <p>The rules of the Game of Score are missing right now. If you want to check out the multi-player simulated dice game, click Group A or Group B or make up a group name. Click "refresh" whenever it is available, then click "Roll". You get a point for making the number 20 in at least two computations.</p> 
 
-<p>Almost all Internet traffic to and from the "schalk.site" Digitalocean droplet is encrypted. The "Game of Score" is the only exception. The best way to load it in a browser is to navegate to <a href = "https://game.schalk.site">http://game.schalk.site</a> and click the link.   </p>
+<p>Internet traffic to and from the "schalk.site" Digitalocean droplet is encrypted. The "Game of Score" Haskell WebSockets server handles secure websockets traffic by reverse proxy to a background process running at http://127.0.0.1:3055. WebSockets packets addressed to wss://game.schalk.site get passed by the Nginx web server to http://127.0.0.1:3055 and responses to out addressed to wss://game.schalk.site. Here's a link to the front-end on the schalk.net droplet: <a href = "https://score.schalk.net">https:/score.schalk.net</a>.   </p>
 
 <p> It's such a joy, in the safety of small, isolated modules, to have the internal workings of a function rely on and mutate global variables - even variables that were not provided as arguments. When your functions don't have to be pure; for example, when you are free to define functions that return results only on every third, fourth, or whatever execution, JavaScript becomes more flexible and powerful. These sorts of things can be done safely in small, isolated modules.   </p>
 

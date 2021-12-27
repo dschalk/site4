@@ -1,7 +1,7 @@
 <script>
 let N = 1;
 let ar = [];
-
+import {fade} from "svelte/transition";
 var first = function first (e) {
     ar = [];
     if (e.keyCode == 13) {
@@ -141,6 +141,12 @@ function main2 (n) {
     p {font-size: 24px}
     pre {font-size: 22px}
 </style>
+<div style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
+    <br>
+   Two Factorization Algorithms  
+</div>
+
+
 <p class = "big">Efficient Algorithm</p>
 <p>Enter a number between 2 and a few <span class = "big">quadrillion</span><span>.</span></p>
 <input type="text" on:keydown={first2} />

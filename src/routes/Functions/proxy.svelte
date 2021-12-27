@@ -125,9 +125,9 @@ pre {
   <p></p>
  Configuration of the Server Droplet
 </div>
-<p>This website is built on two <a href="https://www.digitalocean.com">DigitalOcean</a> droplets. This page handles traffic to and from the schalk.net domain. This article pertains to the other droplet, the one that handles https and wss traffic to and from the schalk.site domain. I'll call it the "schalk.site droplet".</p>
+<p>This website is built on two <a href="https://www.digitalocean.com">DigitalOcean</a> droplets. This page handles traffic to and from the schalk.net domain. It's the other droplet, the one that handles https and wss traffic to and from schalk.site, that will be the topic of discussion here. I want to show anyone who is interested how simple it can be to host secure JavaScript and Haskell servers on a Linux (Debian 11 in this case) droplet.</p>
 
-<p>DigitalOcean droplets' disk size, memory, and processing capacity can be upgraded as needed. For now, the schalk.site droplet has a 25 GB SSD, 1 GB RAM, and minimal processing power. It costs $6.00 / month and is more than adequate for present needs.    </p>
+<p>DigitalOcean droplets' disk size, memory, and processing capacity can be upgraded as needed. The schalk.site droplet has a 25 GB SSD, 1 GB RAM, and minimal processing power. It costs $6.00 / month and is more than adequate for now.   ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp   </p>
 <p> The schalk.site droplet was created with the Debian 11 operating system. Its basic web server is Nginx, which serves simple html pages and reverse proxies https and wss traffic to and from Haskell servers running at . Two JavaScript WebSockets servers  uses the Nginx web server, a ufw firewall, and Upstart to load server processes on startup and keep them active. Letsencrypt TLS certificates and keys were installed and Nginx server blocks updated with the command, "certbot --nginx".</p>
 <h3>The JavaScript Servers</h3>
 <p>Asynchronous behavior tested at <a href="/Functions/factors">factors</a> relies on two JavaScript WebSockets servers. The simplest of the two provides pseudo-random numbers. This Upstart unit file, located at /etc/systemd/system/server2.service, loads index.js (located at /home/u/Server3) on port 3002 whenever Debian 11 boots. </p>

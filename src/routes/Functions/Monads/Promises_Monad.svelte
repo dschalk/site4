@@ -7,7 +7,7 @@ var O = {b0:1,b1:2,b2:3};
 var factors = function factors () {return("DOG, CAT, DOG")};
 var candle = `Hello`;
 onMount(() => {
-/* var worker = new Worker('../../lib/worker.js');
+var worker = new Worker('../../lib/worker.js');
 console.log("worker is ", worker);
 worker.postMessage(10000);
 worker.onmessage = e => { 
@@ -17,7 +17,7 @@ worker.onmessage = e => {
   if (e.data[1].length > 1)  mon("d", `The prime factors of ${data0} are ${data1}.`) 
   else mon("d", `${e.data[0]} is a prime number.`);
   mon("b", e.data[1]);
-} */
+} 
 
 var socket2 = new WebSocket("wss://schalk.site:3002")
 socket2.onclose = function (event) {
