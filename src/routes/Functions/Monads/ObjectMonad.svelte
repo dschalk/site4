@@ -25,7 +25,7 @@ const handleSubmit = () => {
 	submit = true
 }
 	
-const handleKeyup = () => {
+const handleKeyup = (event) => {
 		submit = false
     if (event.code == 'Enter') {
 		    event.preventDefault()

@@ -131,7 +131,7 @@ function main2 (n) {
         font-size: 22px;
     }
     .big {
-        font-size: 25;
+        font-size: 25px;
         font-weight: 700;
     }
     .marg {
@@ -164,4 +164,4 @@ function main2 (n) {
 <pre>{code}</pre>
 <p>This is the code for the bitwise-operator algorithm:</p>
 <pre>{display_main}</pre> 
-<a href = "http://score.schalk.site:3055">Game of Score</a>
+<a href = "http://score.schalk.net">Game of Score</a>

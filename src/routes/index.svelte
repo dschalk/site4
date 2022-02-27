@@ -1,9 +1,11 @@
 
 <h1>Home</h1>
 
-<p>This site is being developed in the SvelteKit framework. It's hosted on a Digital Ocean Ubuntu 20.04 droplet. A Digital Ocean Debian 11 droplet hosts two secure JavaScript WebSocket servers, a Haskell WebSockets server, and two Haskell web servers. The Haskell servers are not intrinsically secure, but they handle https and wss traffic through Nginx's reverse proxy procedure. The JavaScript servers handle traffic to and from <a href = "Functions/Monads/Async_monad/">async_with_WebSockets.</a> The Haskell Warp server provides access to a <a href = "https://one.schalk.site">collection of legal documents.</a></p>. 
+<p>This site is being developed in the SvelteKit framework. It's hosted on a Digital Ocean Debian 11 droplet. Another Digital Ocean Debian 11 droplet hosts secure JavaScript and Haskell WebSockets servers and two Haskell web servers.</p>. 
 
-<p>The topics covered on this site becomes increasingly diverse as content is added. I don't know what to call it. It isn't a typical blog. I think of it as a journal with running examples and links to web addresses, but there is no chronological order so it isn't exactly a journal. Maybe it's a high-tech filing cabinet for ideas, and for things I've learned that might be useful to others.</p>
+<p>The topics covered on this site become increasingly diverse as I add content. It's a place for me to keep a record of discoveries and creations I don't want to lose or forget, and a place to publish things others might find useful.</p>
+
+<p> <a href = "https://book.schalk.net">JavaScipt Monads</a> and <a href = https://score.schalk.net>"The Game of Score"</a> are back online after laying dormant on GitHub for years. Both rely on Haskell WebSockets servers for most of their functionality, including multiplayer games and todo lists shared by players in each of an unlimited number of user-defined or selected groups. </p> 
 
 
 

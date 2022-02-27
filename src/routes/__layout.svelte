@@ -1,15 +1,15 @@
 
-<div>  
+<div>
 <nav>
     <ul>
     <li>
-        <a href="/">Home</a>    
+        <a href="/">Home</a>
     </li>
 
     <li>
         <a href="/Functions">Functions</a>
     </li>
-    
+
     <li>
         <a href="/Mahjong">Riichi Mahjong</a>
     </li>
@@ -48,6 +48,7 @@
   :global(body) {background-color: papayawhip;}
   :global(p) {font-size: 20px;}
   :global(a) {font-size: 20px;}
+  :global(pre) {font-size: 16px;}
 </style>
 <div> </div>
 <div class ="container"><slot /></div>
