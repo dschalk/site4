@@ -1,4 +1,4 @@
-<script>
+ <script>
 import {fade} from "svelte/transition";
 
 import { onMount } from 'svelte';
@@ -25,7 +25,7 @@ onMount(() => {
                         C = e.data;
                         E = e.data;
                     }
-                }); 
+                });
             };
         };
         var i = 0
@@ -85,7 +85,7 @@ let code = `onMount(() => {
                         C = e.data;
                         E = e.data;
                     }
-                }); 
+                });
             };
         };
         var i = 0
@@ -235,7 +235,7 @@ var html = `<h3>Enter the upper limit for a pseudo-random number:</h3>
 
 <div style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
     <br>
-  Two Asynchronous Functions    
+  Two Asynchronous Functions
 </div>
 <h3>Enter the upper limit for a pseudo-random number:</h3>
 <input type="text" on:keydown={handleKeydown1} />
@@ -257,4 +257,3 @@ Here's how the script begins:
 <pre>{soc1}</pre>
 <p>And here's the code for the prime decomposition server:</p>
 <pre>{soc2}</pre>
-
