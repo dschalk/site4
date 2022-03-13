@@ -1,4 +1,3 @@
-
 <script>
 // import { onMount } from "svelte";
 import {fade} from "svelte/transition";
@@ -12,11 +11,28 @@ var b1 = "inline";
 var b2 = "inline";
 var b3 = "inline";
 
+var b4 = "inline";
+var b5 = "inline";
+var b6 = "inline";
+var b7 = "inline";
+
 var s = 'stop';
 var AA;
 var BB;
 var CC;
 var DD;
+var WW;
+var XX;
+var YY;
+var ZZ;
+var ZYXW;
+var WXYZ;
+var m2;
+var Z = "";
+
+function clone (x) {return JSON.parse(JSON.stringify(x))};
+var clean = a => a.map( ar => ar.filter(x => x !== undefined));
+var cleanB = a => a.filter(x => x !== undefined);
 
 function M (x) {
   return function go (func) {
@@ -27,26 +43,29 @@ function M (x) {
       else if (func === "stop") return x;
   }
 };
-function g(ar) {
-  var x = (ar.pop())**3;
-  ar.unshift(x);
-  return ar;
-};
 
-function g2 (ar) {return (ar.flatMap(v => (v+1)**3))};
-function g3 (ar) {return (ar.flatMap(v => Math.round(v**(1/3))))};
+$: m2 = M([ [3,6,9,12], [], [] ]);
 
-var s = "stop";
-var mon = M([1,2,3,4]);
+function updateB (ar) {
+  WW = ar[1][0];
+  XX = ar[1][1];
+  YY = ar[1][2];
+  ZZ = ar[1][3];
+  ZYXW = [WW, XX, YY, ZZ];
+  WXYZ = cleanB(ZYXW);
+  console.log("<><><><><><><><><><>>>>--> ZYXW and WXYZ are", ZYXW, WXYZ);
+  return WXYZ;
+}
 
-var mon3 = M([1,2,3,4]);
-
-var m2 = M([[1,2,3,4],[],[]]);
-
-console.log("m2(s) at line 41 is", JSON.parse(JSON.stringify(m2(s))));
+m2 = M([ [1,2], [3,4], [] ]);
+console.log("m2(s) and WXYZ before updateB() is", WXYZ);
+m2(updateB);
+updateC(m2);
+console.log("m2(s) and WXYZ after updateB() is", clone(m2(s)), WXYZ)
 
 function update (monad) {
-    if (monad(s)[0][0]) b0 = "inline" 
+  console.log("In update. monad(s) is", monad(s))
+    if (monad(s)[0][0] == true) b0 = "inline" 
     else b0 = "none";  
 
     if (monad(s)[0][1]) b1 = "inline" 
@@ -59,6 +78,26 @@ function update (monad) {
     else b3 = "none";  
 }
 
+function updateC (monad) {
+  console.log("In updateC. monad(s) is", monad(s))
+    if (monad(s)[1][0]) b4 = "inline" 
+    else b4 = "none";  
+
+    if (monad(s)[1][1]) b5 = "inline" 
+    else b5 = "none";  
+
+    if (monad(s)[1][2]) b6 = "inline" 
+    else b6 = "none";  
+
+    if (monad(s)[1][3]) b7 = "inline" 
+    else b7 = "none";  
+}
+
+$: m2 = M([ [1,3], [5,17], [] ]);
+console.log("m2(s) before updateC(m2(s)", clone(m2(s)))
+updateC(m2)
+console.log("m2(s) after updateC(m2)G", clone(m2(s)))
+
 var roll = ar => [ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*12) + 1, Math.floor(Math.random()*20) + 1], [], [] ];
 
 function runRoll () {
@@ -70,6 +109,7 @@ function runRoll () {
   b0 = b1 = b2 = b3 = "inline";
 }
 runRoll();
+
 function op1 () {
 op = "+";
 if (nums.length === 2) {nums[1] = calc(nums[0],op,nums[1]); nums = []; dis4 = "inline"}
@@ -112,24 +152,142 @@ if (c === "-") return (a - b);
 if (c === "/") return (a / b);
 if (c === "concat") return parseInt("" + a + b, 10);
 }
-
-var s = "stop";
-
-var mon2 = M([2,4,6,8]);
-console.log("mon2 and mon2(s) are", mon2, mon2(s));
-
-var num = n => ar => {
-  var t = ar.splice(n,1);
-};
-
+console.log("<><><><><><><><><><><><><><><><><><><>")
+console.log("calc(3,4,'+')", calc(3,4,'+' ));
 var mon3 = M([1,2,3,4]);
 function fmon3 (f) {mon3 = mon3(f)};
 function fmon3Reset () {mon3 = M([1,2,3,4])}
 
+function sort (ar) {
+  AA = ar(s)[0][0] ? ar(s)[0][0] : b0 = "none";
+  BB = ar(s)[0][1] ? ar(s)[0][1] : b1 = "none";
+  CC = ar(s)[0][2] ? ar(s)[0][2] : b2 = "none";
+  DD = ar(s)[0][3] ? ar(s)[0][3] : b3 = "none";
+  EE = ar(s)[1][0] ? ar(s)[1][0] : b4 = "none";
+  FF = ar(s)[1][1] ? ar(s)[1][1] : b5 = "none";
+  GG = ar(s)[1][2] ? ar(s)[1][2] : b6 = "none";
+  HH = ar(s)[1][3] ? ar(s)[1][3] : b7 = "none";
+}
+
+var click0 = ar => {
+    ar[1].push(ar[0].splice(0,1)[0]);
+    console.log("m2(s)[0]", m2(s)[0]);
+    console.log("m2(s)[1]", m2(s)[1]);
+    sort(m2);
+    m2(updateB);
+    //updateC(m2);
+    ar = ar;
+    return ar;
+};
+
+var click1 = ar => {
+    ar[1].push(ar[0].splice(1,1)[0]);
+    console.log("m2(s)[0]", m2(s)[0]);
+    console.log("m2(s)[1]", m2(s)[1]);
+    sort(m2);
+    m2(updateB);
+    // updateC(m2);
+    ar = ar;
+    return ar;
+};
+
+var click2 = ar => {
+    ar[1].push(ar[0].splice(2,1)[0]);
+    console.log("m2(s)[0]", m2(s)[0]);
+    console.log("m2(s)[1]", m2(s)[1]);
+    sort(m2);
+    m2(updateB);
+    //updateC(m2);
+    ar = ar;
+    return ar;
+};
+
+var click3 = ar => {
+    ar[1].push(ar[0].splice(3,1)[0]);
+    console.log("m2(s)[0]", m2(s)[0]);
+    console.log("m2(s)[1]", m2(s)[1]);
+    sort(m2);
+    m2(updateB);
+    // updateC(m2);
+    ar = ar;
+    return ar;
+};
+
+function clic0 () {
+  m2(click0);
+  m2(clean);
+  console.log("m2(s) is", m2(s));
+} 
+
+function clic1 () {
+  m2(click1);
+  m2(clean);
+  console.log("m2(s) is", m2(s));
+} 
+
+function clic2 () {
+  m2(click2);
+  m2(clean);
+  console.log("m2(s) is", m2(s));
+} 
+
+function clic3 () {
+  m2(click3);
+  m2(clean);
+  console.log("m2(s) is", m2(s));
+} 
+
+function choose (index) {
+    return click(index);
+}
+
+var roll = ar => [ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*12) + 1, Math.floor(Math.random()*20) + 1], [], [] ];
+
+var fu = a => {
+    var b;
+    var result;
+    if (a[1].length === 3) {
+      a[0].push(a[2].pop());
+
+    if ((a[2][0]) && a[1].length === 2) {
+        b = clone(a); 
+        result = calc(a[1][0], a[1][1], a[2][0]);
+    }
+    if (result == 20 && a[0].length < 2) {
+      Z = "Congratulations! You made it.";
+      A(runRoll);
+    }
+    b = clone(a); 
+        a[0].push()
+        a[1] = a[2] = [];
+        return (a);
+    } 
+    else return a;
+}
+
+var m4 = M([ [3,4], [5,6], ["concat"]]);
+console.log("m4(s) before m4(fu)", clone(m4(s)));
+m4(fu);
+console.log("m4(s) after m4(fu)", m4(s));
+m4 = M([ [3,4], [5,6], [] ]);
+console.log("m4(s) before m4(fu)", clone(m4(s)));
+m4(fu);
+console.log("m4(s) after m4(fu)", m4(s));
+
+
+function g(ar) {
+  var x = (ar.pop())**3;
+  ar.unshift(x);
+  return ar;
+};
+
+function g2 (ar) {return (ar.flatMap(v => (v+1)**3))};
+function g3 (ar) {return (ar.flatMap(v => Math.round(v**(1/3))))};
+
 var simple = `var someMonad = M(3)
 someMonad(v=>v**3);
 someMonad('stop');  // 27
-someMonad(v=>v+15)('stop');  // 42 and back around to 42 again:
+someMonad(v=>v+15)('stop');  // 42 .. Now let's go back to 42 the hard way:
 someMonad(v=>v/7)(v=>v+2)(v=>v*v)(v=>v**(1/6))(v=>v*21)('stop'); // 42 `;
 
 var gCode = `function g(ar) {
@@ -176,100 +334,13 @@ var Mcode = `function M (x) {
   }
 }; `;
 
-var clean = a => a.map( ar => ar.filter(x => x !== undefined));
-
-function sort (ar) {
-  AA = ar(s)[0][0] ? ar(s)[0][0] : b0 = "none";
-  BB = ar(s)[0][1] ? ar(s)[0][1] : b1 = "none";
-  CC = ar(s)[0][2] ? ar(s)[0][2] : b2 = "none";
-  DD = ar(s)[0][3] ? ar(s)[0][3] : b3 = "none";
-}
-
-var click0 = ar => {
-    ar[1].push(ar[0].splice(0,1)[0]);
-    console.log("m2(s)[0]", m2(s)[0]);
-    sort(m2);
-    ar = ar;
-    return ar;
-};
-
-var click1 = ar => {
-    ar[1].push(ar[0].splice(1,1)[0]);
-    console.log("m2(s)[0]", m2(s)[0]);
-    sort(m2);
-    ar = ar;
-    return ar;
-};
-
-var click2 = ar => {
-    ar[1].push(ar[0].splice(2,1)[0]);
-    console.log("m2(s)[0]", m2(s)[0]);
-    sort(m2);
-    ar = ar;
-    return ar;
-};
-
-var click3 = ar => {
-    ar[1].push(ar[0].splice(3,1)[0]);
-    console.log("m2(s)[0]", m2(s)[0]);
-    sort(m2);
-    return ar;
-};
-
-function clic0 () {
-  m2(click0);
-  m2(clean);
-  update(m2);
-  // b0 = "none"
-  console.log("m2(s) is", m2(s));
-} 
-
-function clic1 () {
-  m2(click1);
-  m2(clean);
-  update(m2);
-  // b1 = "none"
-  console.log("m2(s) is", m2(s));
-} 
-
-function clic2 () {
-  m2(click2);
-  m2(clean);
-  update(m2);
-  // b2 = "none"
-  console.log("m2(s) is", m2(s));
-} 
-
-function clic3 () {
-  m2(click3);
-  m2(clean);
-  update(m2);
-  // b3 = "none"
-  console.log("m2(s) is", m2(s));
-} 
-
-console.log("**************************************TEST");
-console.log("m2(s) is", JSON.parse(JSON.stringify(m2(s))));
-
-
-console.log("**************************************TEST");
-
-
-
-function choose (index) {
-    return click(index);
-}
-
-function runClick (i) {
-    console.log("In runClick at the top -- m2(s) is", JSON.parse(JSON.stringify(m2(s))));
-    console.log("m2(s)", m2(s));
-    m2(click(i));
-    // m2(clean);
-} 
-
-/* m2 = M([ [2,4,6,8], [], [] ]);
-console.log("AA, BB, CC, DD", AA, BB, CC, DD);
-console.log("m2(s) is now", m2(s)); */
+var test_1 = `m4(s) before m4(fu) (3) [Array(2), Array(2), Array(1)]0: (2) [3, 4]1: (2) [5, 6]2: ['concat']length: 3[[Prototype]]: Array(0)
+game.svelte? [sm]:48 m4(s) after m4(fu) (3) [Array(3), Array(0), Array(0)]0: (3) [3, 4, 56]1: []2: []length: 3[[Prototype]]: Array(0)
+game.svelte? [sm]:50 m4(s) before m4(fu) (3) [Array(2), Array(2), Array(0)]0: (2) [3, 4]1: (2) [5, 6]2: []length: 3[[Prototype]]: Array(0)
+game.svelte? [sm]:52 m4(s) after m4(fu) (3) [Array(2), Array(2), Array(0)]0: (2) [3, 4]1: (2) [5, 6]2: []length: 3[[Prototype]]: Array(0)
+`;
+m2 = M([ [0,0,0,], [], [] ])
+clic3();
 
 </script>
 
@@ -287,6 +358,9 @@ The Game of Score Server
 <a href = "https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new">Link</a>
 <p> This page will demonstrate the use of recursive explicit closures spawned by a function M defined below. I sometimes call these closures "monads" partly because, like Haskell monads, they facilitate composing functions on encapsulated values. More about this is at <a href="../Monads/">Home</a	></p>
 <p>I wrote "explicit" because all functions are closures, as explained in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">CLOSURES</a>. By the way, the word "ersatz" in the caption is there for critics who complain these aren't Category Theory monads. Some of these critics will be surprised to learn that Haskell monads aren't Catagory Theory monads either. </p>
+
+
+
 <h2>The Project</h2>
 
 <p> I'm going to construct an interactive simulated dice game my son taght me. It's called "Score". I wrote an elaborate version of the game of Score around eight years ago, using a Haskell WebSockets server to manage multiple clients and interacting groups of clients, compute all of the possible solutiong to each roll of the dice unless no solution existed, and more. It also featured a shared todo list for each group along with a group chat application. It isn't up and running right now, although I do revive it from time to time.</p>
@@ -316,7 +390,12 @@ The Game of Score Server
 <br><br>
 <button on:click = {runRoll}>ROLL</button>
 <br><br>
-{m2(s)}
+<button style = "display: {b4}" >{WW}</button> 
+<button style = "display: {b5}" >{XX}</button> 
+<button style = "display: {b6}" >{YY}</button> 
+<button style = "display: {b7}" >{ZZ}</button>
+
+<h1>{WW} ** {XX} ** {YY} ** {ZZ} **</h1>
 <br><br><br><br><br><br><br><br><br><br>
 <p> Here's the HTML code for the first demo:</p>
 <pre>{demo}</pre>
