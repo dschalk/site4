@@ -6,15 +6,15 @@ import Button from "./Button.svelte";
 var A,B,C,D,AA,BB,CC,DD,EE,FF,GG,HH = "wait";
 var N = 0;
 
-var b0 = "inline";
-var b1 = "inline";
-var b2 = "inline";
-var b3 = "inline";
+var b0 = "none";
+var b1 = "none";
+var b2 = "none";
+var b3 = "none";
 
-var b4 = "inline";
-var b5 = "inline";
-var b6 = "inline";
-var b7 = "inline";
+var b4 = "none";
+var b5 = "none";
+var b6 = "none";
+var b7 = "none";
 
 var s = 'stop';
 var AA;
@@ -31,8 +31,10 @@ var m2;
 var Z = "";
 
 function clone (x) {return JSON.parse(JSON.stringify(x))};
-var clean = a => a.map( ar => ar.filter(x => x !== undefined));
-var cleanB = a => a.filter(x => x !== undefined);
+
+var clean = a => a.map( ar => ar.filter(x => (x != (undefined && 0))));
+
+var cleanB = a => a.filter(x => x !== (undefined && 0));
 
 function M (x) {
   return function go (func) {
@@ -44,24 +46,32 @@ function M (x) {
   }
 };
 
-$: m2 = M([ [3,6,9,12], [], [] ]);
+m2 = M( [ [0,0,0,0], [], []])
 
 function updateB (ar) {
-  WW = ar[1][0];
-  XX = ar[1][1];
-  YY = ar[1][2];
-  ZZ = ar[1][3];
-  ZYXW = [WW, XX, YY, ZZ];
-  WXYZ = cleanB(ZYXW);
-  console.log("<><><><><><><><><><>>>>--> ZYXW and WXYZ are", ZYXW, WXYZ);
-  return WXYZ;
+  if ((ar[1][0] !== undefined) || (ar[1][0] === 0)) {WW = ar[1][0]; b4 = "inline"}
+  else b4 = "none";
+  console.log("In updateB at the top. b4 is", b4);
+
+  if ((ar[1][1] !== undefined) || (ar[1][1] === 0)) {XX = ar[1][1]; b5 = "inline"}
+  else b4 = "none";
+  console.log("In updateB at the top. b5 is", b5);
+
+  if ((ar[1][2] !== undefined) || (ar[1][2] !== 0)) {YY = ar[1][2]; b6 = "inline"}
+  else b4 = "none";
+  console.log("In updateB at the top. b4 is", b6);
+
+  if ((ar[1][3] !== undefined) || (ar[1][3] === 0)) {ZZ = ar[1][3]; b7 = "inline"}
+  else b4 = "none";
+  console.log("In updateB at the top. b4 is", b7);
+
 }
 
-m2 = M([ [1,2], [3,4], [] ]);
+m2 = M([ [8,8,8,8], [], [] ]);
 console.log("m2(s) and WXYZ before updateB() is", WXYZ);
 m2(updateB);
-updateC(m2);
-console.log("m2(s) and WXYZ after updateB() is", clone(m2(s)), WXYZ)
+updateC();
+console.log("m2(s) and WXYZ after updateB() is", m2(s), WXYZ)
 
 function update (monad) {
   console.log("In update. monad(s) is", monad(s))
@@ -77,11 +87,28 @@ function update (monad) {
     if (monad(s)[0][3]) b3 = "inline" 
     else b3 = "none";  
 }
+m2 = M([ [4,4,4,4], [], [] ])
 
-function updateC (monad) {
-  console.log("In updateC. monad(s) is", monad(s))
-    if (monad(s)[1][0]) b4 = "inline" 
-    else b4 = "none";  
+function updateC () {
+  console.log("Happy cars and trains. m2(s) is", m2(s));
+/*
+  console.log("<><><><><><><>-->-> In updateC. m2(s) is", m2(s))
+    if (m2(s)[1].length == 1) b4 = "inline" 
+     else b4 = "none";  
+
+  console.log("<><><><><><><>-->-> In updateC. m2(s) is", m2(s))
+    if (m2(s)[1].length == 2) b3 = b4 = "inline" 
+     else b4 = "none";  
+
+
+    if (monad(s)[1].length > 0) b4 = "inline" 
+     else b4 = "none";  
+
+    if (monad(s)[1].length > 0) b4 = "inline" 
+     else b4 = "none";  
+
+    if (monad(s)[1].length > 0) b4 = "inline" 
+     else b4 = "none";  
 
     if (monad(s)[1][1]) b5 = "inline" 
     else b5 = "none";  
@@ -91,24 +118,34 @@ function updateC (monad) {
 
     if (monad(s)[1][3]) b7 = "inline" 
     else b7 = "none";  
+    */
 }
 
-$: m2 = M([ [1,3], [5,17], [] ]);
+$: m2 = M([ [0,0,0,0], [], [] ]);
 console.log("m2(s) before updateC(m2(s)", clone(m2(s)))
-updateC(m2)
-console.log("m2(s) after updateC(m2)G", clone(m2(s)))
+updateC()
+console.log("m2(s) after updateC()", clone(m2(s)))
 
-var roll = ar => [ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*12) + 1, Math.floor(Math.random()*20) + 1], [], [] ];
+var roll = ar => {
+  ar = [ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*12) + 1, Math.floor(Math.random()*20) + 1], [], [] ];
+  b4 = b5 = b6 = b7 = 'none';
+};
 
 function runRoll () {
-  m2(roll);
+  m2 = [ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*12) + 1, Math.floor(Math.random()*20) + 1], [], [] ];
   AA = m2(s)[0][0];
   BB = m2(s)[0][1];
   CC = m2(s)[0][2];
   DD = m2(s)[0][3];
+  
+  WW = m2(s)[1][0];
+  XX = m2(s)[1][1];
+  YY = m2(s)[1][2];
+  ZZ = m2(s)[1][3];
   b0 = b1 = b2 = b3 = "inline";
+  b4 = b5 = b6 = b7 = 'none';
 }
-runRoll();
+// runRoll();
 
 function op1 () {
 op = "+";
@@ -158,57 +195,65 @@ var mon3 = M([1,2,3,4]);
 function fmon3 (f) {mon3 = mon3(f)};
 function fmon3Reset () {mon3 = M([1,2,3,4])}
 
-function sort (ar) {
-  AA = ar(s)[0][0] ? ar(s)[0][0] : b0 = "none";
-  BB = ar(s)[0][1] ? ar(s)[0][1] : b1 = "none";
-  CC = ar(s)[0][2] ? ar(s)[0][2] : b2 = "none";
-  DD = ar(s)[0][3] ? ar(s)[0][3] : b3 = "none";
-  EE = ar(s)[1][0] ? ar(s)[1][0] : b4 = "none";
-  FF = ar(s)[1][1] ? ar(s)[1][1] : b5 = "none";
-  GG = ar(s)[1][2] ? ar(s)[1][2] : b6 = "none";
-  HH = ar(s)[1][3] ? ar(s)[1][3] : b7 = "none";
-}
-
+m2 = M([ [3,3,3,3], [], []])
 var click0 = ar => {
     ar[1].push(ar[0].splice(0,1)[0]);
     console.log("m2(s)[0]", m2(s)[0]);
     console.log("m2(s)[1]", m2(s)[1]);
-    sort(m2);
     m2(updateB);
-    //updateC(m2);
+    // clean(m2);
+    // updateC(m2);
     ar = ar;
     return ar;
 };
 
+var shrink = ar => {
+  if (ar[0].length === 4) b3 = "none";
+  if (ar[0].length === 3) b2 = "none";
+  if (ar[0].length === 2) b1 = "none";
+  if (ar[0].length === 1) b0 = "none";
+}
+
+var expand = ar => {
+  if (ar[1].length === 0) b4 = "inline";
+  if (ar[1].length === 1) b5 = "inline";
+  if (ar[1].length === 2) b6 = "inline";
+  if (ar[1].length === 3) b7 = "inline";
+
+}
+
 var click1 = ar => {
+    ar(shrink);
+    ar(expand);
     ar[1].push(ar[0].splice(1,1)[0]);
     console.log("m2(s)[0]", m2(s)[0]);
     console.log("m2(s)[1]", m2(s)[1]);
-    sort(m2);
     m2(updateB);
-    // updateC(m2);
+    updateC();
     ar = ar;
     return ar;
 };
 
 var click2 = ar => {
+    ar(shrink);
+    ar(expand);
     ar[1].push(ar[0].splice(2,1)[0]);
     console.log("m2(s)[0]", m2(s)[0]);
     console.log("m2(s)[1]", m2(s)[1]);
-    sort(m2);
     m2(updateB);
-    //updateC(m2);
+    updateC(m2);
     ar = ar;
     return ar;
 };
 
 var click3 = ar => {
+    ar(shrink);
+    ar(expand);
     ar[1].push(ar[0].splice(3,1)[0]);
     console.log("m2(s)[0]", m2(s)[0]);
     console.log("m2(s)[1]", m2(s)[1]);
-    sort(m2);
     m2(updateB);
-    // updateC(m2);
+    updateC(m2);
     ar = ar;
     return ar;
 };
@@ -241,13 +286,13 @@ function choose (index) {
     return click(index);
 }
 
-var roll = ar => [ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*12) + 1, Math.floor(Math.random()*20) + 1], [], [] ];
 
 var fu = a => {
     var b;
     var result;
     if (a[1].length === 3) {
       a[0].push(a[2].pop());
+    }
 
     if ((a[2][0]) && a[1].length === 2) {
         b = clone(a); 
@@ -255,25 +300,15 @@ var fu = a => {
     }
     if (result == 20 && a[0].length < 2) {
       Z = "Congratulations! You made it.";
-      A(runRoll);
-    }
-    b = clone(a); 
-        a[0].push()
+      if( a[0].length < 2)  runRoll()
+      else {
+        a[0].push(result)
         a[1] = a[2] = [];
-        return (a);
+        return a;
+      }
     } 
     else return a;
-}
-
-var m4 = M([ [3,4], [5,6], ["concat"]]);
-console.log("m4(s) before m4(fu)", clone(m4(s)));
-m4(fu);
-console.log("m4(s) after m4(fu)", m4(s));
-m4 = M([ [3,4], [5,6], [] ]);
-console.log("m4(s) before m4(fu)", clone(m4(s)));
-m4(fu);
-console.log("m4(s) after m4(fu)", m4(s));
-
+};
 
 function g(ar) {
   var x = (ar.pop())**3;
@@ -339,9 +374,23 @@ game.svelte? [sm]:48 m4(s) after m4(fu) (3) [Array(3), Array(0), Array(0)]0: (3
 game.svelte? [sm]:50 m4(s) before m4(fu) (3) [Array(2), Array(2), Array(0)]0: (2) [3, 4]1: (2) [5, 6]2: []length: 3[[Prototype]]: Array(0)
 game.svelte? [sm]:52 m4(s) after m4(fu) (3) [Array(2), Array(2), Array(0)]0: (2) [3, 4]1: (2) [5, 6]2: []length: 3[[Prototype]]: Array(0)
 `;
-m2 = M([ [0,0,0,], [], [] ])
-clic3();
 
+m2 = M([ [5,5,5,5], [], [] ]) 
+/*
+let foo;
+$: foo = function foo () {
+  if (m2(s)[1].length = 1) b4 = "inline";
+  if (m2(s)[1].length = 2) b4 = b5 = "inline";
+  if (m2(s)[1].length = 3) b4 = b5 = b6 = "inline";
+  if (m2(s)[1].length = 4) b4 = b5 = b6 = b7 = "inline";
+  m2 = m2;
+  console.log("m2(s), b4, b5, b6 and b7 are", m2(s), b4, b5, b6, b7);
+}
+$: foo();
+*/
+
+function m2Func () {console.log("In m2Func m2(s), b4, b5, b6 and b7 are", m2(s),b4,b5,b6,b7)};
+// updateB(m2);
 </script>
 
 <style>
@@ -390,11 +439,12 @@ The Game of Score Server
 <br><br>
 <button on:click = {runRoll}>ROLL</button>
 <br><br>
-<button style = "display: {b4}" >{WW}</button> 
-<button style = "display: {b5}" >{XX}</button> 
-<button style = "display: {b6}" >{YY}</button> 
-<button style = "display: {b7}" >{ZZ}</button>
-
+<button style = "display: {b4}">{WW}</button> 
+<button style = "display: {b5}">{XX}</button> 
+<button style = "display: {b6}">{YY}</button> 
+<button style = "display: {b7}">{ZZ}</button>
+<br><br>
+<button on:click = {m2Func}>m2Func</button>
 <h1>{WW} ** {XX} ** {YY} ** {ZZ} **</h1>
 <br><br><br><br><br><br><br><br><br><br>
 <p> Here's the HTML code for the first demo:</p>

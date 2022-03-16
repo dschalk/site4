@@ -20,6 +20,10 @@
             <a href="/Functions/Monads/">Home</a>    
         </li>
 
+        <li>
+            <a href="/Functions/Monads/test">test</a>    
+        </li>
+
       	<li>
             <a href="/Functions/Monads/Monad">Monads</a>
         </li>
