@@ -44,27 +44,35 @@ function g(ar) {
   return ar;
 };
 
-$: fu = a => {
-    if (a[1].length === 2 && a[2].length === 1)   {
-        a[0].push(calc(a[1][0], a[1][1],a[2][0]))
-        a[1] = [];
-    }
+fu = b => {
+  var a = b;
+  var result;
+  if (a[1].length === 2 && a[2].length === 1)   {
+    console.log("In fu. a[1]", a[1]);
+    result = calc(a[1][0], a[1][1],a[2][0]);
+    a[0].push(result);
+    a[1] = [];
+  }
 
-    var result;
-    if (a[1].length === 3) {
-      a[1].pop();
-    }
+  if (a[1].length === 3) {
+    a[1].pop();
+  }
 
-    if (result == 20 && a[0].length < 2) {
+  if (result == 20) {
+    if (a[0].length < 3) {
       Z = "Congratulations! You made it.";
-      if( a[0].length < 2)  runRoll()
-      else {
-        a[0].push(result)
-        a[1] = a[2] = [];
-        return a;
-      }
-    } 
+      setTimeout(() => Z = "", 2000);
+      console.log("Z is", Z);
+      runRoll();
+    }
+    else if (a[0].length === 3) {
+      a[0].push(result)
+      a[1] = a[2] = [];
+      return a;
+    }
     else return a;
+  }
+  return "done";
 };
 
 function g2 (ar) {return (ar.flatMap(v => (v+1)**3))};
@@ -134,8 +142,13 @@ var update = () => {
    
   EE = m2(s)[2][0];
   console.log(AA,BB,CC,DD,WW,XX,YY,ZZ,EE);
+  return "done";
 }
-
+async function run () {
+    await m2(fu)
+    update()
+    sfunc();
+}
 var mon3 = M([1,2,3,4]);
 function fmon3 (f) {mon3 = mon3(f)};
 function fmon3Reset () {mon3 = M([1,2,3,4])}
@@ -238,6 +251,15 @@ console.log("m2(s)[0] ... ", m2(s)[0], m2(s)[1], m2(s)[2]);
 m2(click0(m2));
 console.log("m2(s)[0] ... ", m2(s)[0], m2(s)[1], m2(s)[2]);
 
+run();
+
+console.log("after run(). m2(s)[0] ... ", m2(s)[0], m2(s)[1], m2(s)[2]);
 
 
 
+var fmon = f => x => x(f);
+var reset = x => [1,2,3,4]
+
+mon3 = M([1,2,3,4]);
+
+console.log("mon3(g)(g)(g)(g)", mon3(g)(g)(g)(g)(g3)(s))

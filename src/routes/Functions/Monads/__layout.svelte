@@ -21,7 +21,7 @@
         </li>
 
         <li>
-            <a href="/Functions/Monads/test">test</a>    
+            <a href="/Functions/Monads/game">game</a>    
         </li>
 
       	<li>
