@@ -84,7 +84,7 @@ fu = a => {
   }
 
   if (result == 20 && interSec[0]) {
-      Z = "Congratulations! You made it.";
+      Z = "Congratulations! You did it.";
       setTimeout(() => Z = "", 3000);
       console.log("Z is", Z);
       runRoll();
@@ -235,7 +235,8 @@ var monad = `function M (x) {
     }
 };
 
-m2 = M(x);`
+m2 = M(any value); // The argument can be any JavaScript value
+// For the game, the starting value is [ [0,0,0,0], [], [], [] ].`   
 
 var monad3 = `var mon3 = M([1,2,3,4]);
 function g(ar) {
@@ -261,12 +262,12 @@ var square = x => x*x;
 var pow = n => x => x**n;
 var add = n => x => x + n;
 var mult = n => x => x * n;
-console.log(m3(s));
-console.log(m3(pow(3))(s));
-console.log(m3(s));
-console.log(m3(add(-6))(mult(2))(s));
-console.log(m3(add(7))(pow(1/2))(mult(6))(s));
-console.log(m3(s));`;
+console.log(m3(s));             // 3
+console.log(m3(pow(3))(s));     // 27
+console.log(m3(s));             // 27
+console.log(m3(add(-6))(mult(2))(s));          // 42
+console.log(m3(add(7))(pow(1/2))(mult(6))(s)); // 42
+console.log(m3(s));             // 42` 
 
 var runR = `function runRoll () {
     m2 = M([ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, // Actually one line
@@ -426,7 +427,7 @@ The Recursive Closure "m2" Controls the Action
 <p>Next, x will be an array manipulated by functions designed for that purpose. Here are the functions responsible for the interactive demonstration below:</p>
 <pre>{monad3}</pre>
 <p>If you click mon3 = mon3(g) four times and the click mon3 = mon3(g3), you will see that mon3(s) returns its original value, [1,2,3,4]. By the way, the "mon3 =" part of "mon3 = mon3(g)" is included solely to trigger updating of browser displays. Svelte doesn't have a virtual DOM, and merely changing objects isn't enough to trigger DOM updates. For example, arr = [1,2,3] doesn't change in the DOM when arr.push(888) is called. arr = arr afterwards or arr = arr.push(888) initially both do the trick.  </p>
-<h1 style = "margin-left: 30%">[{mon3(s).join(", ")}]</h1>
+<div style = "margin-left: 10%; font-size:44px; color:#ddaadd">[{mon3(s).join(", ")}]</div>
 <br><br>
 <button on:click={() => mon3 = mon3(g)}>mon3 = mon3(g)</button>
 <button on:click={() => mon3 = mon3(g2)}>mon3 = mon3(g2)</button>
@@ -436,7 +437,7 @@ The Recursive Closure "m2" Controls the Action
 <p>Now for the game of score, a game involving four dice and two or three-stage arithmetic computations with the goal of arriving at the number 20. My son Alex taught it to me a decade ago, when he was in middle school. I was also learning the Haskell programming language, so I developed a multiplayer online version with groups of interacting player, a chat box, and a shared-by-the-group todo list controlled by a Haskell WebSockets server backend. The backend could compute all possible solutions, if any existed, to any throw of the dice. It also identified all of the impossible-to-solve rolls. Users could change the default number of dice sides from 6,6,12,and 20 and the goal from the default value of 20. A version of it is online at <a href = "https://score.schalk.net">https://score.schalk.net</a>.</p>
 
 <p>This demonstration doesn't work in conjunction with a remote server, nor does it feature any Haskell code. It's just a little solitaire game providing an opportunity to consider the interesting possibilities of recursive closures. Instead of being argunents of function or putting functionality into methods, these monads take care of business by consuming function that that do their work sheltered from what goes on in the global space, now or after future maintainers have added features. </p>
-<h2>{Z}</h2>
+<h1 style = "color:#ffccff">{Z}</h1>
 <br>
 <button style = "display: {b0}" on:click = {() => m2(click0(m2))}>{AA}</button> 
 <button style = "display: {b1}" on:click = {() => m2(click1(m2))}>{BB}</button> 
