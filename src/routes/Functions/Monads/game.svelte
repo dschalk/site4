@@ -225,6 +225,55 @@ function m2Func () {console.log("In m2Func m2(s), b4, b5, b6 and b7 are", m2(s),
 
 $: Z = Z;
 
+var m3 = M(3);
+var m4 = M(3); 
+
+var cube = x => x**3;
+var square = x => x*x;
+var pow = n => x => x**n;
+var add = n => x => x + 1*n;
+var mult = n => x => x * n;
+var reset = n => x => x = n;
+
+function cubeFu () {m4 = m4(cube)};
+function squareFu () {m4 = m4(square)};
+
+function divFraction (x) {
+    var y = x.split('/');
+    console.log(y)
+    if(y.length > 1){
+        return (y[0] / y[1])
+    }
+    else{
+        return y[0];
+    }
+}
+var powFu = function powFu (e) {
+    var p = divFraction(e.target.value);
+    console.log("p is", p);
+    if (e.keyCode == 13) {
+        m4 = m4(pow(p));
+    }
+};
+    
+var addFu = function addFu (e) {
+    if (e.keyCode == 13) {
+        var p = divFraction(e.target.value);
+        console.log("p is", p);
+        m4 = m4(add(p));
+    };
+  };
+    
+var multFu = function multFu (e) {
+    if (e.keyCode == 13) {
+        m4 = m4(mult(divFraction(e.target.value)))};
+};
+    
+var resetFu = function resetFu (e) {
+    if (e.keyCode == 13) {
+        m4 = m4(reset(divFraction(e.target.value)))};
+};
+
 var monad = `function M (x) {
     return function go (func) {
         if (typeof func === "function") {
@@ -256,18 +305,19 @@ someMonad(v=>v/7)(v=>v+2)(v=>v*v)(v=>v**(1/6))(v=>v*21)('stop'); // 42
 someMonad(s) // 42 
 
 var s = 'stop';
-var m3 = M(3);   // creates a new monad named "m3".
+var m4 = M(3);   // creates a new monad named "m4".
 var cube = x => x**3;
 var square = x => x*x;
 var pow = n => x => x**n;
 var add = n => x => x + n;
 var mult = n => x => x * n;
-console.log(m3(s));             // 3
-console.log(m3(pow(3))(s));     // 27
-console.log(m3(s));             // 27
-console.log(m3(add(-6))(mult(2))(s));          // 42
-console.log(m3(add(7))(pow(1/2))(mult(6))(s)); // 42
-console.log(m3(s));             // 42` 
+var reset = n => x => x = n;
+console.log(m4(s));             // 3
+console.log(m4(pow(3))(s));     // 27
+console.log(m4(s));             // 27
+console.log(m4(add(-6))(mult(2))(s));          // 42
+console.log(m4(add(7))(pow(1/2))(mult(6))(s)); // 42
+console.log(m4(s));             // 42` 
 
 var runR = `function runRoll () {
     m2 = M([ [Math.floor(Math.random()*6) + 1, Math.floor(Math.random()*6) + 1, // Actually one line
@@ -402,7 +452,39 @@ var upD = `var update = () => {
   YY = m2(s)[1][2];
   ZZ = m2(s)[1][3];
 };`;
-
+var fuFuncs = `function divFraction (x) {
+    var y = x.split('/');
+    console.log(y)
+    if(y.length > 1){
+        return (y[0] / y[1])
+    }
+    else{
+        return y[0];
+    }
+}
+var powFu = function powFu (e) {
+    var p = divFraction(e.target.value);
+    if (e.keyCode == 13) {
+        m4 = m4(pow(p));
+    }
+};
+    
+var addFu = function addFu (e) {
+    if (e.keyCode == 13) {
+        var p = divFraction(e.target.value);
+        m4 = m4(add(p));
+    };
+  };
+    
+var multFu = function multFu (e) {
+    if (e.keyCode == 13) {
+        m4 = m4(mult(divFraction(e.target.value)))};
+};
+    
+var resetFu = function resetFu (e) {
+    if (e.keyCode == 13) {
+        m4 = m4(reset(divFraction(e.target.value)))};
+};`;
 
 </script>
 
@@ -422,7 +504,31 @@ The Recursive Closure "m2" Controls the Action
 <p>I call functions returned by M "monads", much to the consternation of self-styled "functional programmers" who scoff at the idea that JavaScript (my beloved favorite language) could possibly have monads such as those defined in the Haskell programming language. I won't elaborate any further, except to point out that neither my monads nor the Haskell monads are Category Theory monads. The Haskell part actually surprises some programmers. Google "hask is a category" if you don't believe me.</p>
 <p>In a solitaire version of the game of score below, x will be an array of arrays in the form x =  [ [], [], [], [] ] where x[0] contains four integers simulating a throw of two six-sided, one twelve-sided, and one twenty-sided dice. To get accustomed to how it works, let's start with x = 3 and some elementary math functions. </p>
 <pre>{simple}</pre>  
-<p>m2 encapsulates its x value. Since x can be accessed only by calling "m2('stop')", it is unlikely that any future code-maintainer will inadvertently step on it. </p>
+<p>These are the event handlers used in the following demonstration: </p>
+<pre>{fuFuncs}</pre>
+<p>Data is sent to the event handlers as strings which are rendered into numbers by eval(). Prior to evaluating events this way, square roots could be taken when "0.5" was entered but "1/2" resulted in "1". Other fractions gave the same wrong answer, 1. I don't know how a malicious hacker could enter a stringified command or function in the following demonstrations that would have any effect, but I'll see if I can do it. Meanwhile, I'll think about remedying the fraction bug some other way.  </p>
+<h2>m4(s) is {m4(s)}</h2>
+<br><br>
+<button on:click = {cubeFu}>m4(cube)</button>
+<button on:click = {squareFu}>m4(square)</button>
+<br><br>
+<span style = "font-size: 24px">To call m4(pow(n)), enter n in the box -> </span> 
+<input type = text style = "width: 65px" on:keydown = {powFu} />
+<br><br>
+
+<span style = "font-size: 24px">To call m4(add(n)), enter n in the box -> </span> 
+<input type = number style = "width: 65px" on:keydown = {addFu} />
+<br><br>
+
+<span style = "font-size: 24px">To call m4(mult(n)), enter n in the box -> </span> 
+<input type = text style = "width: 65px" on:keydown = {multFu} />
+<br><br>
+
+<span style = "font-size: 24px">To call m4(reset(n)), enter n in the box -> </span> 
+<input type = number style = "width: 65px" on:keydown = {resetFu} />
+<br><br>
+
+
 
 <p>Next, x will be an array manipulated by functions designed for that purpose. Here are the functions responsible for the interactive demonstration below:</p>
 <pre>{monad3}</pre>

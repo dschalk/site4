@@ -263,3 +263,75 @@ var reset = x => [1,2,3,4]
 mon3 = M([1,2,3,4]);
 
 console.log("mon3(g)(g)(g)(g)", mon3(g)(g)(g)(g)(g3)(s))
+var s = 'stop';
+var m3 = M(3);   // creates a new monad named "m3".
+var cube = x => x**3;
+var square = x => x*x;
+var pow = n => x => x**n;
+var add = n => x => x + n;
+var mult = n => x => x * n;
+console.log(m3(s));
+console.log(m3(pow(3))(s));
+console.log(m3(s));
+console.log(m3(add(-6))(mult(2))(s));
+console.log(m3(add(7))(pow(1/2))(mult(6))(s));
+console.log(m3(s));
+var car = eval("x => x**3");
+console.log(car(3))
+console.log(3 + "4")
+console.log(3 + eval("4"))
+console.log(m3(pow(1/4))(s))
+console.log(typeof (3 + 4))
+var x = '1/2';
+function clue (x) {
+var y = x.split('/');
+console.log(y)
+if(y.length > 1){
+    console.log(y[0] / y[1]);
+    return (y[0] / y[1])
+}
+else{
+    console.log(y[0]);
+    return y[0];
+}
+}
+console.log(clue("7"))
+console.log(clue('1/4'));
+
+function divFraction (x) {
+    var y = x.split('/');
+    console.log(y)
+    if(y.length > 1){
+        return (y[0] / y[1])
+    }
+    else{
+        return y[0];
+    }
+}
+var powFu = function powFu (e) {
+    var p = 1*divFraction(e);
+    console.log("p is", p);
+    if (e.keyCode == 13) {
+        m3 = m3(pow(p));
+        return m3(s);
+    }
+};
+    
+var addFu = function addFu (e) {
+    if (e.keyCode == 13) {
+        var p = divFraction(e.target.value);
+        console.log("p is", p);
+        m4 = m4(add(p));
+    };
+  };
+   console.log(m3(s))
+   m3(x => 16)(s)
+   console.log(m3(pow(1/2))(s))
+   console.log(m3(pow(4))(s));
+   console.log(m3(pow(1/2))(s))
+
+
+
+
+
+
