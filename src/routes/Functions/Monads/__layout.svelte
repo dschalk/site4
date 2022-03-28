@@ -20,10 +20,6 @@
             <a href="/Functions/Monads/">Home</a>    
         </li>
 
-        <li>
-            <a href="/Functions/Monads/game">game</a>    
-        </li>
-
       	<li>
             <a href="/Functions/Monads/Monad">Monads</a>
         </li>
@@ -41,7 +37,7 @@
         </li>
 
         <li>
-            <a href="/Functions/Monads/game">Score</a>
+            <a href="/Functions/Monads/game">newScore</a>
         </li>
 
     </ul>

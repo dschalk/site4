@@ -1,0 +1,860 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Legal and Constitutional Matters/Amended_Brief_of_Respondent_(Supreme_Court).pdf": {
+    "file": "entries/endpoints/Legal and Constitutional Matters/Amended_Brief_of_Respondent_(Supreme_Court).pdf.js",
+    "src": "src/routes/Legal and Constitutional Matters/Amended_Brief_of_Respondent_(Supreme_Court).pdf",
+    "isEntry": true,
+    "assets": [
+      "assets/Amended_Brief_of_Respondent_(Supreme_Court)-06f11a47.pdf"
+    ]
+  },
+  "src/routes/images/Motion-to-clarify.pdf": {
+    "file": "entries/endpoints/images/Motion-to-clarify.pdf.js",
+    "src": "src/routes/images/Motion-to-clarify.pdf",
+    "isEntry": true,
+    "assets": [
+      "assets/Motion-to-clarify-40577ab0.pdf"
+    ]
+  },
+  "src/routes/images/Man5-Dora.svg": {
+    "file": "entries/endpoints/images/Man5-Dora.svg.js",
+    "src": "src/routes/images/Man5-Dora.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man5-Dora-e0dc7801.svg"
+    ]
+  },
+  "src/routes/images/Pin5-Dora.svg": {
+    "file": "entries/endpoints/images/Pin5-Dora.svg.js",
+    "src": "src/routes/images/Pin5-Dora.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin5-Dora-30763830.svg"
+    ]
+  },
+  "src/routes/images/Sou5-Dora.svg": {
+    "file": "entries/endpoints/images/Sou5-Dora.svg.js",
+    "src": "src/routes/images/Sou5-Dora.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou5-Dora-f0a08b01.svg"
+    ]
+  },
+  "src/routes/images/Blank.svg": {
+    "file": "entries/endpoints/images/Blank.svg.js",
+    "src": "src/routes/images/Blank.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Blank-da09ab7d.svg"
+    ]
+  },
+  "src/routes/images/Front.svg": {
+    "file": "entries/endpoints/images/Front.svg.js",
+    "src": "src/routes/images/Front.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Front-1274e6f7.svg"
+    ]
+  },
+  "src/routes/images/Hatsu.svg": {
+    "file": "entries/endpoints/images/Hatsu.svg.js",
+    "src": "src/routes/images/Hatsu.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Hatsu-3570c54f.svg"
+    ]
+  },
+  "src/routes/images/Back.svg": {
+    "file": "entries/endpoints/images/Back.svg.js",
+    "src": "src/routes/images/Back.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Back-86c20c7e.svg"
+    ]
+  },
+  "src/routes/images/Chun.svg": {
+    "file": "entries/endpoints/images/Chun.svg.js",
+    "src": "src/routes/images/Chun.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Chun-34b9d3b2.svg"
+    ]
+  },
+  "src/routes/images/Haku.svg": {
+    "file": "entries/endpoints/images/Haku.svg.js",
+    "src": "src/routes/images/Haku.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Haku-3fa1fb22.svg"
+    ]
+  },
+  "src/routes/images/Man1.svg": {
+    "file": "entries/endpoints/images/Man1.svg.js",
+    "src": "src/routes/images/Man1.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man1-03e52da6.svg"
+    ]
+  },
+  "src/routes/images/Man2.svg": {
+    "file": "entries/endpoints/images/Man2.svg.js",
+    "src": "src/routes/images/Man2.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man2-acf1e6c2.svg"
+    ]
+  },
+  "src/routes/images/Man3.svg": {
+    "file": "entries/endpoints/images/Man3.svg.js",
+    "src": "src/routes/images/Man3.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man3-325a1884.svg"
+    ]
+  },
+  "src/routes/images/Man4.svg": {
+    "file": "entries/endpoints/images/Man4.svg.js",
+    "src": "src/routes/images/Man4.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man4-7662281e.svg"
+    ]
+  },
+  "src/routes/images/Man5.svg": {
+    "file": "entries/endpoints/images/Man5.svg.js",
+    "src": "src/routes/images/Man5.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man5-7a2ac63a.svg"
+    ]
+  },
+  "src/routes/images/Man6.svg": {
+    "file": "entries/endpoints/images/Man6.svg.js",
+    "src": "src/routes/images/Man6.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man6-67b739c6.svg"
+    ]
+  },
+  "src/routes/images/Man7.svg": {
+    "file": "entries/endpoints/images/Man7.svg.js",
+    "src": "src/routes/images/Man7.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man7-0a5bc6aa.svg"
+    ]
+  },
+  "src/routes/images/Man8.svg": {
+    "file": "entries/endpoints/images/Man8.svg.js",
+    "src": "src/routes/images/Man8.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man8-97111ebd.svg"
+    ]
+  },
+  "src/routes/images/Man9.svg": {
+    "file": "entries/endpoints/images/Man9.svg.js",
+    "src": "src/routes/images/Man9.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Man9-545083c5.svg"
+    ]
+  },
+  "src/routes/images/Pin1.svg": {
+    "file": "entries/endpoints/images/Pin1.svg.js",
+    "src": "src/routes/images/Pin1.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin1-323ffafc.svg"
+    ]
+  },
+  "src/routes/images/Pin2.svg": {
+    "file": "entries/endpoints/images/Pin2.svg.js",
+    "src": "src/routes/images/Pin2.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin2-e6d70245.svg"
+    ]
+  },
+  "src/routes/images/Pin3.svg": {
+    "file": "entries/endpoints/images/Pin3.svg.js",
+    "src": "src/routes/images/Pin3.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin3-ce8c060f.svg"
+    ]
+  },
+  "src/routes/images/Pin4.svg": {
+    "file": "entries/endpoints/images/Pin4.svg.js",
+    "src": "src/routes/images/Pin4.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin4-b18f579b.svg"
+    ]
+  },
+  "src/routes/images/Pin5.svg": {
+    "file": "entries/endpoints/images/Pin5.svg.js",
+    "src": "src/routes/images/Pin5.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin5-845896fc.svg"
+    ]
+  },
+  "src/routes/images/Pin6.svg": {
+    "file": "entries/endpoints/images/Pin6.svg.js",
+    "src": "src/routes/images/Pin6.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin6-39b17b21.svg"
+    ]
+  },
+  "src/routes/images/Pin7.svg": {
+    "file": "entries/endpoints/images/Pin7.svg.js",
+    "src": "src/routes/images/Pin7.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin7-791e1112.svg"
+    ]
+  },
+  "src/routes/images/Pin8.svg": {
+    "file": "entries/endpoints/images/Pin8.svg.js",
+    "src": "src/routes/images/Pin8.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin8-ce2569f0.svg"
+    ]
+  },
+  "src/routes/images/Pin9.svg": {
+    "file": "entries/endpoints/images/Pin9.svg.js",
+    "src": "src/routes/images/Pin9.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pin9-c2a09e31.svg"
+    ]
+  },
+  "src/routes/images/Shaa.svg": {
+    "file": "entries/endpoints/images/Shaa.svg.js",
+    "src": "src/routes/images/Shaa.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Shaa-bb25f593.svg"
+    ]
+  },
+  "src/routes/images/Sou1.svg": {
+    "file": "entries/endpoints/images/Sou1.svg.js",
+    "src": "src/routes/images/Sou1.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou1-9feb90ce.svg"
+    ]
+  },
+  "src/routes/images/Sou2.svg": {
+    "file": "entries/endpoints/images/Sou2.svg.js",
+    "src": "src/routes/images/Sou2.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou2-27de0790.svg"
+    ]
+  },
+  "src/routes/images/Sou3.svg": {
+    "file": "entries/endpoints/images/Sou3.svg.js",
+    "src": "src/routes/images/Sou3.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou3-84cf6459.svg"
+    ]
+  },
+  "src/routes/images/Sou4.svg": {
+    "file": "entries/endpoints/images/Sou4.svg.js",
+    "src": "src/routes/images/Sou4.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou4-14cd2aa7.svg"
+    ]
+  },
+  "src/routes/images/Sou5.svg": {
+    "file": "entries/endpoints/images/Sou5.svg.js",
+    "src": "src/routes/images/Sou5.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou5-0aeb90b6.svg"
+    ]
+  },
+  "src/routes/images/Sou6.svg": {
+    "file": "entries/endpoints/images/Sou6.svg.js",
+    "src": "src/routes/images/Sou6.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou6-ce516701.svg"
+    ]
+  },
+  "src/routes/images/Sou7.svg": {
+    "file": "entries/endpoints/images/Sou7.svg.js",
+    "src": "src/routes/images/Sou7.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou7-f9f4bc8a.svg"
+    ]
+  },
+  "src/routes/images/Sou8.svg": {
+    "file": "entries/endpoints/images/Sou8.svg.js",
+    "src": "src/routes/images/Sou8.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou8-88efce5d.svg"
+    ]
+  },
+  "src/routes/images/Sou9.svg": {
+    "file": "entries/endpoints/images/Sou9.svg.js",
+    "src": "src/routes/images/Sou9.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Sou9-0c0682e2.svg"
+    ]
+  },
+  "src/routes/images/Nan.svg": {
+    "file": "entries/endpoints/images/Nan.svg.js",
+    "src": "src/routes/images/Nan.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Nan-745be89c.svg"
+    ]
+  },
+  "src/routes/images/Pei.svg": {
+    "file": "entries/endpoints/images/Pei.svg.js",
+    "src": "src/routes/images/Pei.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Pei-0cbcc780.svg"
+    ]
+  },
+  "src/routes/images/Ton.svg": {
+    "file": "entries/endpoints/images/Ton.svg.js",
+    "src": "src/routes/images/Ton.svg",
+    "isEntry": true,
+    "assets": [
+      "assets/Ton-25a9f902.svg"
+    ]
+  },
+  "src/routes/Brief.pdf": {
+    "file": "entries/endpoints/Brief.pdf.js",
+    "src": "src/routes/Brief.pdf",
+    "isEntry": true,
+    "assets": [
+      "assets/Brief-0c7755b7.pdf"
+    ]
+  },
+  "src/routes/Law/Motion-to-clarify.pdf": {
+    "file": "entries/endpoints/Law/Motion-to-clarify.pdf.js",
+    "src": "src/routes/Law/Motion-to-clarify.pdf",
+    "isEntry": true,
+    "assets": [
+      "assets/Motion-to-clarify-40577ab0.pdf"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/__layout.svelte-bf21893e.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/pages/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Legal and Constitutional Matters/__layout.svelte": {
+    "file": "entries/pages/Legal and Constitutional Matters/__layout.svelte.js",
+    "src": "src/routes/Legal and Constitutional Matters/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Legal and Constitutional Matters/index.svelte": {
+    "file": "entries/pages/Legal and Constitutional Matters/index.svelte.js",
+    "src": "src/routes/Legal and Constitutional Matters/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/__layout.svelte": {
+    "file": "entries/pages/Functions/__layout.svelte.js",
+    "src": "src/routes/Functions/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/__layout.svelte-6a464927.css"
+    ]
+  },
+  "src/routes/Functions/index.svelte": {
+    "file": "entries/pages/Functions/index.svelte.js",
+    "src": "src/routes/Functions/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/bitmask_prime_generator.svelte": {
+    "file": "entries/pages/Functions/bitmask_prime_generator.svelte.js",
+    "src": "src/routes/Functions/bitmask_prime_generator.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Binary_Operations/__layout.svelte": {
+    "file": "entries/pages/Functions/Binary_Operations/__layout.svelte.js",
+    "src": "src/routes/Functions/Binary_Operations/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/Binary_Operations/__layout.svelte-26164a7e.css"
+    ]
+  },
+  "src/routes/Functions/Binary_Operations/index.svelte": {
+    "file": "entries/pages/Functions/Binary_Operations/index.svelte.js",
+    "src": "src/routes/Functions/Binary_Operations/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Binary_Operations/binary_arithmetic.svelte": {
+    "file": "entries/pages/Functions/Binary_Operations/binary_arithmetic.svelte.js",
+    "src": "src/routes/Functions/Binary_Operations/binary_arithmetic.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/bitwise_primes.svelte": {
+    "file": "entries/pages/Functions/bitwise_primes.svelte.js",
+    "src": "src/routes/Functions/bitwise_primes.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/malfunction.svelte": {
+    "file": "entries/pages/Functions/malfunction.svelte.js",
+    "src": "src/routes/Functions/malfunction.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/functional.svelte": {
+    "file": "entries/pages/Functions/functional.svelte.js",
+    "src": "src/routes/Functions/functional.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Quadratic.svelte": {
+    "file": "entries/pages/Functions/Quadratic.svelte.js",
+    "src": "src/routes/Functions/Quadratic.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/factors.svelte": {
+    "file": "entries/pages/Functions/factors.svelte.js",
+    "src": "src/routes/Functions/factors.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/factors.svelte-56ea9023.css"
+    ]
+  },
+  "src/routes/Functions/haskell.svelte": {
+    "file": "entries/pages/Functions/haskell.svelte.js",
+    "src": "src/routes/Functions/haskell.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/Button.svelte_svelte_type_style_lang-07cdaeed.css"
+    ]
+  },
+  "src/routes/Functions/Monads/__layout.svelte": {
+    "file": "entries/pages/Functions/Monads/__layout.svelte.js",
+    "src": "src/routes/Functions/Monads/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/Monads/__layout.svelte-5daab665.css"
+    ]
+  },
+  "src/routes/Functions/Monads/index.svelte": {
+    "file": "entries/pages/Functions/Monads/index.svelte.js",
+    "src": "src/routes/Functions/Monads/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Monads/Promises_Monad.svelte": {
+    "file": "entries/pages/Functions/Monads/Promises_Monad.svelte.js",
+    "src": "src/routes/Functions/Monads/Promises_Monad.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/Monads/Promises_Monad.svelte-92aea2ed.css"
+    ]
+  },
+  "src/routes/Functions/Monads/Async_monad.svelte": {
+    "file": "entries/pages/Functions/Monads/Async_monad.svelte.js",
+    "src": "src/routes/Functions/Monads/Async_monad.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Monads/ObjectMonad.svelte": {
+    "file": "entries/pages/Functions/Monads/ObjectMonad.svelte.js",
+    "src": "src/routes/Functions/Monads/ObjectMonad.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Monads/Button.svelte": {
+    "file": "entries/pages/Functions/Monads/Button.svelte.js",
+    "src": "src/routes/Functions/Monads/Button.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/Button.svelte_svelte_type_style_lang-5ad6e1fd.css"
+    ]
+  },
+  "src/routes/Functions/Monads/Monad0.svelte": {
+    "file": "entries/pages/Functions/Monads/Monad0.svelte.js",
+    "src": "src/routes/Functions/Monads/Monad0.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/Monads/Monad0.svelte-68b83c62.css"
+    ]
+  },
+  "src/routes/Functions/Monads/Monad3.svelte": {
+    "file": "entries/pages/Functions/Monads/Monad3.svelte.js",
+    "src": "src/routes/Functions/Monads/Monad3.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Monads/Monad.svelte": {
+    "file": "entries/pages/Functions/Monads/Monad.svelte.js",
+    "src": "src/routes/Functions/Monads/Monad.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/Monads/game.svelte": {
+    "file": "entries/pages/Functions/Monads/game.svelte.js",
+    "src": "src/routes/Functions/Monads/game.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/Monads/game.svelte-6f2ea4c2.css",
+      "assets/Button.svelte_svelte_type_style_lang-5ad6e1fd.css"
+    ]
+  },
+  "src/routes/Functions/proxy.svelte": {
+    "file": "entries/pages/Functions/proxy.svelte.js",
+    "src": "src/routes/Functions/proxy.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/proxy.svelte-7766bb44.css"
+    ]
+  },
+  "src/routes/Functions/score.svelte": {
+    "file": "entries/pages/Functions/score.svelte.js",
+    "src": "src/routes/Functions/score.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/code.svelte": {
+    "file": "entries/pages/Functions/code.svelte.js",
+    "src": "src/routes/Functions/code.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Functions/time.svelte": {
+    "file": "entries/pages/Functions/time.svelte.js",
+    "src": "src/routes/Functions/time.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js",
+      "src/routes/images/Man1.svg",
+      "src/routes/images/Man2.svg",
+      "src/routes/images/Man3.svg",
+      "src/routes/images/Man4.svg",
+      "src/routes/images/Man5.svg",
+      "src/routes/images/Man6.svg",
+      "src/routes/images/Man7.svg",
+      "src/routes/images/Man8.svg",
+      "src/routes/images/Man9.svg",
+      "src/routes/images/Pin1.svg",
+      "src/routes/images/Pin2.svg",
+      "src/routes/images/Pin3.svg",
+      "src/routes/images/Pin4.svg",
+      "src/routes/images/Pin5.svg",
+      "src/routes/images/Pin6.svg",
+      "src/routes/images/Pin7.svg",
+      "src/routes/images/Pin8.svg",
+      "src/routes/images/Pin9.svg",
+      "src/routes/images/Sou1.svg",
+      "src/routes/images/Sou2.svg",
+      "src/routes/images/Sou3.svg",
+      "src/routes/images/Sou4.svg",
+      "src/routes/images/Sou5.svg",
+      "src/routes/images/Sou6.svg",
+      "src/routes/images/Sou7.svg",
+      "src/routes/images/Sou8.svg",
+      "src/routes/images/Sou9.svg",
+      "src/routes/images/Chun.svg",
+      "src/routes/images/Haku.svg",
+      "src/routes/images/Hatsu.svg",
+      "src/routes/images/Nan.svg",
+      "src/routes/images/Pei.svg",
+      "src/routes/images/Ton.svg",
+      "src/routes/images/Shaa.svg"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/time.svelte-769d45c9.css"
+    ]
+  },
+  "src/routes/Grammar/__layout.svelte": {
+    "file": "entries/pages/Grammar/__layout.svelte.js",
+    "src": "src/routes/Grammar/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Functions/Binary_Operations/__layout.svelte-26164a7e.css"
+    ]
+  },
+  "src/routes/Grammar/index.svelte": {
+    "file": "entries/pages/Grammar/index.svelte.js",
+    "src": "src/routes/Grammar/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Grammar/Niether of us (has or have).svelte": {
+    "file": "entries/pages/Grammar/Niether of us (has or have).svelte.js",
+    "src": "src/routes/Grammar/Niether of us (has or have).svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Mahjong/__layout.svelte": {
+    "file": "entries/pages/Mahjong/__layout.svelte.js",
+    "src": "src/routes/Mahjong/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Mahjong/__layout.svelte-a9cbf660.css"
+    ]
+  },
+  "src/routes/Mahjong/index.svelte": {
+    "file": "entries/pages/Mahjong/index.svelte.js",
+    "src": "src/routes/Mahjong/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Mahjong/terms.svelte": {
+    "file": "entries/pages/Mahjong/terms.svelte.js",
+    "src": "src/routes/Mahjong/terms.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Mahjong/time.svelte": {
+    "file": "entries/pages/Mahjong/time.svelte.js",
+    "src": "src/routes/Mahjong/time.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js",
+      "src/routes/images/Man1.svg",
+      "src/routes/images/Man2.svg",
+      "src/routes/images/Man3.svg",
+      "src/routes/images/Man4.svg",
+      "src/routes/images/Man5.svg",
+      "src/routes/images/Man6.svg",
+      "src/routes/images/Man7.svg",
+      "src/routes/images/Man8.svg",
+      "src/routes/images/Man9.svg",
+      "src/routes/images/Pin1.svg",
+      "src/routes/images/Pin2.svg",
+      "src/routes/images/Pin3.svg",
+      "src/routes/images/Pin4.svg",
+      "src/routes/images/Pin5.svg",
+      "src/routes/images/Pin6.svg",
+      "src/routes/images/Pin7.svg",
+      "src/routes/images/Pin8.svg",
+      "src/routes/images/Pin9.svg",
+      "src/routes/images/Sou1.svg",
+      "src/routes/images/Sou2.svg",
+      "src/routes/images/Sou3.svg",
+      "src/routes/images/Sou4.svg",
+      "src/routes/images/Sou5.svg",
+      "src/routes/images/Sou6.svg",
+      "src/routes/images/Sou7.svg",
+      "src/routes/images/Sou8.svg",
+      "src/routes/images/Sou9.svg",
+      "src/routes/images/Chun.svg",
+      "src/routes/images/Haku.svg",
+      "src/routes/images/Hatsu.svg",
+      "src/routes/images/Nan.svg",
+      "src/routes/images/Pei.svg",
+      "src/routes/images/Ton.svg",
+      "src/routes/images/Shaa.svg"
+    ],
+    "css": [
+      "assets/entries/pages/Mahjong/time.svelte-96464fd8.css"
+    ]
+  },
+  "src/routes/Mahjong/yaku.svelte": {
+    "file": "entries/pages/Mahjong/yaku.svelte.js",
+    "src": "src/routes/Mahjong/yaku.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Mahjong/yaku.svelte-b36a3fee.css"
+    ]
+  },
+  "src/routes/Button.svelte": {
+    "file": "entries/pages/Button.svelte.js",
+    "src": "src/routes/Button.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/Button.svelte_svelte_type_style_lang-07cdaeed.css"
+    ]
+  },
+  "src/routes/shared/Button.svelte": {
+    "file": "entries/pages/shared/Button.svelte.js",
+    "src": "src/routes/shared/Button.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/Button.svelte_svelte_type_style_lang-5ad6e1fd.css"
+    ]
+  },
+  "src/routes/Law/__layout.svelte": {
+    "file": "entries/pages/Law/__layout.svelte.js",
+    "src": "src/routes/Law/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ],
+    "css": [
+      "assets/entries/pages/Mahjong/__layout.svelte-a9cbf660.css"
+    ]
+  },
+  "src/routes/Law/index.svelte": {
+    "file": "entries/pages/Law/index.svelte.js",
+    "src": "src/routes/Law/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Law/chapter-1.svelte": {
+    "file": "entries/pages/Law/chapter-1.svelte.js",
+    "src": "src/routes/Law/chapter-1.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Law/archive.svelte": {
+    "file": "entries/pages/Law/archive.svelte.js",
+    "src": "src/routes/Law/archive.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js"
+    ]
+  },
+  "src/routes/Law/law.svelte": {
+    "file": "entries/pages/Law/law.svelte.js",
+    "src": "src/routes/Law/law.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-63796eb4.js",
+      "src/routes/images/Chun.svg"
+    ]
+  },
+  "_index-63796eb4.js": {
+    "file": "chunks/index-63796eb4.js"
+  }
+}

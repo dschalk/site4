@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b6adefe3.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Functions/__layout.svelte-45d8fac8.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Functions/Monads/__layout.svelte-ed3bdd87.css">
+	<link rel="modulepreload" href="/_app/start-b6a591d0.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-7ab9b2a4.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-31f91b2d.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/__layout.svelte-c22d6533.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/Monads/__layout.svelte-880bf17c.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/Monads/Async_monad.svelte-e591c2ea.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		}
+	</script>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+
+	</head>
+	
+	<body>
+		<div id="svelte" >
+
+
+<div><nav><ul class="svelte-1ofk2mc"><li class="svelte-1ofk2mc"><a href="/">Home</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Functions">Functions</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Mahjong">Riichi Mahjong</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Grammar">Grammar</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Law">Rule By Law</a></li></ul></nav></div>
+
+
+<div></div>
+<div class="container svelte-1ofk2mc"><br>
+<div style="font-size: 26px">Functions</div>
+
+
+<nav><ul class="svelte-14w1mcn"><li class="svelte-14w1mcn"><a href="/Functions/" class="svelte-14w1mcn">Home</a></li>
+
+        <li class="svelte-14w1mcn"><a href="/Functions/haskell" class="svelte-14w1mcn">Haskell</a></li>
+
+      	<li class="svelte-14w1mcn"><a href="/Functions/bitmask_prime_generator" class="svelte-14w1mcn">Primes</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/factors" class="svelte-14w1mcn">Factors</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/proxy" class="svelte-14w1mcn">Proxies</a></li>
+
+        <li class="svelte-14w1mcn"><a class="large svelte-14w1mcn" href="/Functions/Monads">Monads</a></li>
+
+        <li class="svelte-14w1mcn"><a class="large svelte-14w1mcn" href="/Functions/Binary_Operations">Binary</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/score" class="svelte-14w1mcn">Score</a></li></ul></nav>
+
+
+<br>
+<div style="font-size: 26px">Monads</div>
+
+
+<nav><ul class="svelte-1e9oi5x"><li class="svelte-1e9oi5x"><a href="/Functions/Monads/" class="svelte-1e9oi5x">Home</a></li>
+
+      	<li class="svelte-1e9oi5x"><a href="/Functions/Monads/Monad" class="svelte-1e9oi5x">Monads</a></li>
+
+		<li class="svelte-1e9oi5x"><a href="/Functions/Monads/Monad0" class="svelte-1e9oi5x">A Simple Monad</a></li>
+
+		<li class="svelte-1e9oi5x"><a href="/Functions/Monads/ObjectMonad" class="svelte-1e9oi5x">Object Monads</a></li>
+
+        <li class="svelte-1e9oi5x"><a href="/Functions/Monads/Async_monad" class="svelte-1e9oi5x">Async Monad</a></li>
+
+        <li class="svelte-1e9oi5x"><a href="/Functions/Monads/game" class="svelte-1e9oi5x">Score</a></li></ul></nav>
+
+
+<div style="font-family: Times New Roman; text-align: center; font-size: 38px;"><br>
+  Two Asynchronous Functions
+</div>
+<h3>Enter the upper limit for a pseudo-random number:</h3>
+<input type="text">
+<br>
+<p>The number to evaluate: 10000</p>
+<p>The prime factors of 10000 are: Enter the number in the text box to see the result.</p>
+<h3>Enter a number to see its prime decomposition:</h3>
+<input type="text">
+<p>The prime factors of 10000 are Enter the number in the text box to see the result..</p>
+Here&#39;s how the script begins:
+<pre>import { onMount } from &#39;svelte&#39;;
+let A = 10000;
+let B = 10000;
+let C = 10000;
+let D = 10000;
+let E = &quot;Enter the number in the text box to see the result.&quot;;
+var socket3, socket2, handleKeydown1, handleKeydown2; </pre>
+<p>The work is done in a single function named &quot;start&quot; placed in &quot;onMount.&quot;  Here&#39;s the code:</p>
+<pre>onMount(() =&gt; {
+    socket3 = new WebSocket(&#39;wss://schalk.site:3003&#39;);
+    socket2 = new WebSocket(&#39;wss://schalk.site:3002&#39;);
+    function start () {
+        handleKeydown1 = function handleKeydown1 (e) {
+            if (e.keyCode == 13) {
+                A = e.target.value;
+                socket2.send(e.target.value);
+                socket2.addEventListener(&#39;message&#39;, function (e) {
+                    B = e.data;
+                    D = e.data;
+                    socket3.send(e.data);
+                    socket3.onmessage = function (e) {
+                        C = e.data;
+                        E = e.data;
+                    }
+                });
+            };
+        };
+        var i = 0
+        function func ()  {
+            let x = socket2.readyState
+            let i = 0;
+            if (i &lt; 15 &amp;&amp; x !== 1) {
+                i+=1;
+                console.log(&quot;Repeat i&quot;, i);
+                setTimeout(() =&gt; {
+                    func();
+                },500)
+            }
+            else {
+                i = 0;
+                socket2.send(10000);
+                socket2.onmessage = function(e) {
+                    B = e.data;
+                    D = e.data;
+                    socket3.send(e.data);
+                    socket3.onmessage = function (e) {
+                        C = e.data;
+                        E = e.data;
+                    }
+                }
+            }
+        }
+        func();
+        handleKeydown2 = function handleKeydown2 (e) {
+            if (e.keyCode !== 13) {console.log(&quot;e.keyCode isn&#39;t &#39;Enter&#39;&quot;)}
+            else if (e.keyCode == 13) {
+                socket3.send(e.target.value);
+                D = e.target.value;
+                socket3.onmessage = function (e) {
+                    E = e.data;
+                    B = E;
+                };
+            };
+        };
+    }
+    start();
+});</pre>
+<p>Here&#39;s the HTML:</p>
+<pre>&lt;h3&gt;Enter the upper limit for a pseudo-random number:&lt;/h3&gt;
+&lt;input type=&quot;text&quot; on:keydown={handleKeydown1} /&gt;
+&lt;br&gt;
+&lt;p&gt;The number to evaluate: {D}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;The prime factors of {D} are {E}.&lt;/p&gt; </pre>
+<p>The code isn&#39;t annotated, but the key to understanding it is that socket3 returns a pseudo-random number and socket2 returns the prime factors of the integer it receives. The purpose of this page is to show one way of using WebSockets in SvelteKit. </p>
+<p>The WebSocket servers run on a droplet separate from the droplet hosting schalk.net. They&#39;re on a droplet that services traffic destined for schalk.site. Connections to the servers can be established with, for example, &quot;var sock = new WebSocket(&#39;wss://schalk.site&#39;)&quot;. It&#39;s striking how fast WebSockets traffic moves between Digitalocean droplets on the East Coast. </p>
+<p>Here&#39;s the code for the random number server:</p>
+<pre>var ws = require(&#39;ws&#39;);
+var https = require(&#39;https&#39;);
+var fs = require(&#39;fs&#39;);
+var j;
+
+function randomInt (num) {
+        return Math.floor(Math.random() * num);
+}
+
+const server = https.createServer({
+  cert: fs.readFileSync(&#39;/etc/letsencrypt/live/schalk.site/cert.pem&#39;),
+  key: fs.readFileSync(&#39;/etc/letsencrypt/live/schalk.site/privkey.pem&#39;)
+});
+const wss = new ws.WebSocketServer({server});
+wss.on(&#39;connection&#39;, function connection(ws) {
+ws.on(&#39;message&#39;, function incoming(message) {
+          var number = JSON.parse(message);
+          j = randomInt(number);
+          ws.send(j);
+  });
+
+});
+
+server.listen(3002); </pre>
+<p>And here&#39;s the code for the prime decomposition server:</p>
+<pre>var ws = require(&#39;ws&#39;);
+var https = require(&#39;https&#39;);
+var fs = require(&#39;fs&#39;);
+var j,k,n,arr,ar;
+
+const server = https.createServer({
+  cert: fs.readFileSync(&#39;/etc/letsencrypt/live/schalk.site/cert.pem&#39;),
+  key: fs.readFileSync(&#39;/etc/letsencrypt/live/schalk.site/privkey.pem&#39;)
+});
+const wss = new ws.WebSocketServer({server});
+
+console.log(&quot;started web socket server...&quot;)
+
+function pNums(n) {
+    var store  = [], i, j, primes = [];
+    for (let i = 2; i &lt;= n; ++i) {
+        if (!store [i]) {
+            primes.push(i);
+            for (j = i &lt;&lt; 1; j &lt;= n; j += i) {
+                store[j] = true;
+            }
+        }
+    }
+    return primes;
+}
+
+function small (primes, v) {
+    return primes.slice(0, primes.indexOf(primes.find(e =&gt; e &gt; v)));
+};
+
+function primeNums (x) {
+    return pNums(x);
+};
+
+function pfactors (prms, n) {
+    var ar = [];
+    prms.map(p =&gt; {
+        while (n/p === Math.floor(n/p)) {
+            ar.push(p);
+            n = n/p;
+        };
+    })
+    return ar;
+}
+
+var   sortFactors = ar =&gt; ar.sort(function(x,y) {
+    return (x - y);
+});
+
+var g = x =&gt; {
+        console.log(&quot;In g. x is&quot;, x);
+    var primes = primeNums(x);
+    return pfactors(primes,x);
+}
+
+wss.on(&#39;connection&#39;, function connection(ws) {
+  ws.on(&#39;message&#39;, function incoming(message) {
+    console.log(&quot;server2 incoming message is&quot;, message);
+    var xx = g(message);
+    var x = JSON.stringify(xx);
+    ws.send(x);
+  });
+});
+server.listen(3003); </pre></div>
+
+
+		<script type="module" data-hydrate="1tw94kb">
+		import { start } from "/_app/start-b6a591d0.js";
+		start({
+			target: document.querySelector('[data-hydrate="1tw94kb"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-31f91b2d.js"),
+						import("/_app/pages/Functions/__layout.svelte-c22d6533.js"),
+						import("/_app/pages/Functions/Monads/__layout.svelte-880bf17c.js"),
+						import("/_app/pages/Functions/Monads/Async_monad.svelte-e591c2ea.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

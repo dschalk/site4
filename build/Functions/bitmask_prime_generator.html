@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b6adefe3.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Functions/__layout.svelte-45d8fac8.css">
+	<link rel="modulepreload" href="/_app/start-b6a591d0.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-7ab9b2a4.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-31f91b2d.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/__layout.svelte-c22d6533.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/bitmask_prime_generator.svelte-853cd214.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		}
+	</script>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+
+	</head>
+	
+	<body>
+		<div id="svelte" >
+
+
+<div><nav><ul class="svelte-1ofk2mc"><li class="svelte-1ofk2mc"><a href="/">Home</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Functions">Functions</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Mahjong">Riichi Mahjong</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Grammar">Grammar</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Law">Rule By Law</a></li></ul></nav></div>
+
+
+<div></div>
+<div class="container svelte-1ofk2mc"><br>
+<div style="font-size: 26px">Functions</div>
+
+
+<nav><ul class="svelte-14w1mcn"><li class="svelte-14w1mcn"><a href="/Functions/" class="svelte-14w1mcn">Home</a></li>
+
+        <li class="svelte-14w1mcn"><a href="/Functions/haskell" class="svelte-14w1mcn">Haskell</a></li>
+
+      	<li class="svelte-14w1mcn"><a href="/Functions/bitmask_prime_generator" class="svelte-14w1mcn">Primes</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/factors" class="svelte-14w1mcn">Factors</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/proxy" class="svelte-14w1mcn">Proxies</a></li>
+
+        <li class="svelte-14w1mcn"><a class="large svelte-14w1mcn" href="/Functions/Monads">Monads</a></li>
+
+        <li class="svelte-14w1mcn"><a class="large svelte-14w1mcn" href="/Functions/Binary_Operations">Binary</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/score" class="svelte-14w1mcn">Score</a></li></ul></nav>
+
+
+<div style="font-family: Times New Roman; text-align: center; font-size: 38px;"><br>
+  Using ArrayBuffer With the Sieve of Eratosthenes
+</div>
+
+<h3>Efficient Generation of Prime Numbers</h3>
+<span>Enter a number less than five million (no commas). If the number is larger than 10,000, results at the beginning and at the end will be displayed. Otherwise, rendering a large number of primes and scrolling all the way to the bottom to see the result might require time you would prefer to spend on better things.    </span>
+
+<input type="text">
+<p></p>
+
+<p>This demonstration runs the <a href="https://en.wikipedia.org/wiki/sieve_of_Eratosthenes">sieve_of_Eratosthenes</a> algorithm setting individual bits rather than 32 bit numbers.The function &quot;sieve&quot; uses an ArrayBuffer which is accessed by a Uint32Array named &quot;view&quot;. I defined ArrayBuffer and view in the Chrome console and checked some methods to verify that I had 2,000,000 bits to work with. </p>
+<pre>const buf = new ArrayBuffer(250004);
+const view = new Uint32Array(buf)</pre>
+<p>I entered 2000000 in my ten-year-old desktop computer immediately after loading this site in Chrome. All modifications of view completed in 16 microseconds. The entire process of running view(2000000), including printing the prime numbers, took 60 microseconds. Subsequent runs yielded (view modification, </p>
+<p>The 150,000 integers in the Uint32Array named &quot;view&quot; all start out as zeros. Each time a prime number is identified, all of its multiples up to a designated bound are set to &quot;1&quot;. The 0&#39;s left over at the end correspond to prime numbers. This is the sieve of Eratosthenes working with great efficiency.</p>
+<p>In the final stage, whenever test(i) === 0, i gets appended to the string A. A is the list of primes less than or equal to the sieve argument.</p>  
+<p>The Uint32Array named &quot;view&quot; is not indexed but, for example, &quot;(view[0] &amp; 1&lt;&lt;10)=== 0&quot; returns &quot;false&quot; and &quot;(view[0] &amp; 1&lt;&lt;11) === 0&quot; returns &quot;true&quot; where its position can be ascertained and its value changed with bit masks. view[n] is a binary number and its 32 bits are, therefore, not indexed. That&#39;s not a problem because NUM can easily be examined and flipped using bit masks.  NUM&#39;s precise location in view[n] is resolved into the pair &quot;n,j&quot; pair for lookup, where n is the index in view and j is the position in view[n]. If NUM&#39;s value is still 0 after the sieve has run its course, it&#39;s a prime number. This is an efficient algorithm. I entered 300000 below and quickly scrolled down to see that the largest prime number less than 300,000 is 299,993. There&#39;s no limit to how many integers can be stored in a Uint32Array. Number.MAX_SAFE_INTEGER is 9007199254740991 but given a powerful enough computer and enough time, the largest prime number less than a humongous bigInt much larger than MAX_SAFE_INTEGER could be computed. </p>
+
+<p style="indent: 3%"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">Mozilla Developer Network</a> says, &quot;The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer.&quot; and &quot;It is an array of bytes, often referred to in other languages as a &quot;byte array&quot;.You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.&quot; This is the foundation on which this demo rests:  </p>
+<pre>const buf = new ArrayBuffer(250004);
+const view = new Uint32Array(buf)</pre>
+
+<div>And here&#39;s the function &quot;sieve&quot;:</div>
+<pre>function sieve (N) {
+    var d = new Date();
+    var t = d.getTime();
+    A = &quot;&quot;;
+    var top = N + 1;
+    var max = Math.sqrt(top) + 1;
+    for(let i = 2; i &lt; max; i+=1){
+        if(test(i)) {
+            for(let j = 2*i; j &lt; top; j+=i) {
+                set(j);
+            }
+        }
+    }
+    for(let i = 2; i &lt; top; i++) {
+        if (test(view,i) &amp; N &lt; 10001) A = A + i + &quot;, &quot;;
+        else if (test(view,i) &amp;&amp; N &lt; 1000001 &amp;&amp; (i &lt; 100 || i &gt; 0.99*N)) A = A + i + &quot;, &quot;; 
+        else if (test(view,i) &amp;&amp; N &gt; 1000000 &amp;&amp; (i &lt; 100 || i &gt; 0.9999*N)) A = A + i + &quot;, &quot;; 
+    } </pre>
+<div>These are the functions that set bits and report the status of bits:</div>
+<pre>function set(ar,i) {
+  var a = Math.floor(i / 8)
+  var b = i % 8
+  ar[a] |= (1 &lt;&lt; b)
+};
+
+function test (ar,i) {
+  var a = Math.floor(i / 8);
+  var b = i % 8;
+  var value = ar[a] &amp; (1 &lt;&lt; b);
+  return value === 0;
+}
+}</pre>
+<br><br><br>
+<br><br><br>
+</div>
+
+
+		<script type="module" data-hydrate="acb5cf">
+		import { start } from "/_app/start-b6a591d0.js";
+		start({
+			target: document.querySelector('[data-hydrate="acb5cf"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-31f91b2d.js"),
+						import("/_app/pages/Functions/__layout.svelte-c22d6533.js"),
+						import("/_app/pages/Functions/bitmask_prime_generator.svelte-853cd214.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Practice the five-block method.</title>
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b6adefe3.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Law/__layout.svelte-68f6d88a.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Mahjong/time.svelte-1655e8b9.css">
+	<link rel="modulepreload" href="/_app/start-b6a591d0.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-7ab9b2a4.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-31f91b2d.js">
+	<link rel="modulepreload" href="/_app/pages/Mahjong/__layout.svelte-67e84b7b.js">
+	<link rel="modulepreload" href="/_app/pages/Mahjong/time.svelte-8c2d04f6.js">
+	<link rel="modulepreload" href="/_app/chunks/Shaa-f7d25e62.js">
+	<link rel="modulepreload" href="/_app/chunks/Chun-c77faa24.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		}
+	</script>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+
+	</head>
+	
+	<body>
+		<div id="svelte" >
+
+
+<div><nav><ul class="svelte-1ofk2mc"><li class="svelte-1ofk2mc"><a href="/">Home</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Functions">Functions</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Mahjong">Riichi Mahjong</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Grammar">Grammar</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Law">Rule By Law</a></li></ul></nav></div>
+
+
+<div></div>
+<div class="container svelte-1ofk2mc"><p></p>
+<span style="font-size: 30px">Mahjong</span>
+<nav><ul class="svelte-hwm928"><li class="svelte-hwm928"><a href="/Mahjong/">Mahjong Home</a></li>
+        <li class="svelte-hwm928"><a href="/Mahjong/terms">Japanese terms</a></li>
+
+		<li class="svelte-hwm928"><a href="/Mahjong/yaku">yaku</a></li></ul></nav>
+
+
+
+
+
+
+
+
+
+    
+    
+    <p></p>
+    <div style="font-family: Times New Roman; text-align: center; font-size: 38px;">Riichi Mahjong Tiles
+    </div>
+    <p>One thing you can do is prepare to go out, perhaps using the five-block method. If your system is slow, make sure the the first click is registered (shown below in ar69) before clicking again.</p>
+    <div style="color: #FF0000; text-align: center"><span id="0"><img src="/_app/assets/Hatsu-3570c54f.svg" class="svelte-1ji9h9u"></span>
+    <span id="1"><img src="/_app/assets/Pin8-ce2569f0.svg" class="svelte-1ji9h9u"></span>
+    <span id="2"><img src="/_app/assets/Man7-0a5bc6aa.svg" class="svelte-1ji9h9u"></span>
+    <span id="3"><img src="/_app/assets/Shaa-bb25f593.svg" class="svelte-1ji9h9u"></span>
+    <span id="4"><img src="/_app/assets/Man3-325a1884.svg" class="svelte-1ji9h9u"></span>
+    <span id="5"><img src="/_app/assets/Man5-7a2ac63a.svg" class="svelte-1ji9h9u"></span>
+    <span id="6"><img src="/_app/assets/Ton-25a9f902.svg" class="svelte-1ji9h9u"></span>
+    <span id="7"><img src="/_app/assets/Sou8-88efce5d.svg" class="svelte-1ji9h9u"></span>
+    <span id="8"><img src="/_app/assets/Ton-25a9f902.svg" class="svelte-1ji9h9u"></span>
+    <span id="9"><img src="/_app/assets/Pin9-c2a09e31.svg" class="svelte-1ji9h9u"></span>
+    <span id="10"><img src="/_app/assets/Sou5-0aeb90b6.svg" class="svelte-1ji9h9u"></span>
+    <span id="11"><img src="/_app/assets/Pin6-39b17b21.svg" class="svelte-1ji9h9u"></span>
+    <span id="12"><img src="/_app/assets/Hatsu-3570c54f.svg" class="svelte-1ji9h9u"></span>
+    <span>. </span>
+    <span id="13"><img src="/_app/assets/Haku-3fa1fb22.svg" class="svelte-1ji9h9u"></span></div>
+    
+   
+    <br>
+    <button>SHUFFLE</button>
+    <button>Draw</button> 
+    <button>BACK</button>
+    <button>Forward</button> 
+    
+    <br><br>
+    <div>index: 0</div>
+    <div>draws: 0</div>
+    <div>Current tile indeces: 29,16,6,33,2,4,32,25,32,17,22,14,29,28</div>
+    <div>ar69: </div>
+    <br>
+    <p>JOE is 7,7,7,7</p>
+    <br><br>
+    <div>undefined</div>
+
+    <p>The tile on the right is your draw. To keep it, double click on the tile you wish to discard or click the drawn tile and then the tile to discard. To discard the drawn tile, click the &quot;Draw&quot; button or double click on the drawn tile. If you click a tile in your hand and then the drawn tile, you will revert to having no clicked tiles.  </p>
+    <p>To organize your hand, click on a tile and then click the tile located where you want to place it. This is not the way to place the drawn tile in your hand. Double clicking the tile you wish to discard and clicking the &quot;Draw&quot; button are the only ways to do it. </p> 
+    <p>This module is in the Riichi_Mahjong and &quot;Functional_JavaScript&quot; section. Beginners could use it to arrange hands according to the five-block method.</p>
+    <p>After railing against mindlessly making variables immutable, I wanted to show that immutability sometimes serves a purpose, even in small, isolated modules such as this. As is apparent from the code below, each state of the Riichi Mahjong tiles is cloned deep enough to preserve it in an array that can be traversed. I could have used numbers for this, but Mahjong tiles make a more pleasing illustration.</p>
+    <p>Events: An array, &quot;B&quot;,  of all Riichi Mahjong tiles is shuffled. Then 14 members are spliced from its front, 13 for the hand and one for the first draw. Each time you click &quot;Draw&quot; or double-click the 14th tile, a number n (corresponding to image xyz[n] in the presentation) is spliced from the front of B. The code is at https://github.com/dschalk/blog.schalk.site and is also shown below: </p>
+    <pre class="svelte-1ji9h9u">
+    &lt;script&gt;
+    import {fade} from &quot;svelte/transition&quot;
+    import {flip} from &quot;svelte/animate&quot;;
+
+    function shuffle(array) {
+      var m = array.length, t, i;
+      // While there remain elements to shuffle…
+      while (m) {
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+    
+      return array;
+    }
+    
+    let draws = 0;
+    
+    import M1 from &#39;$libimages/Man1.svg&#39;;
+    import M2 from &#39;$libimages/Man2.svg&#39;;
+    import M3 from &#39;$libimages/Man3.svg&#39;;
+    import M4 from &#39;$libimages/Man4.svg&#39;;
+    import M5 from &#39;$libimages/Man5.svg&#39;;
+    import M6 from &#39;$libimages/Man6.svg&#39;;
+    import M7 from &#39;$libimages/Man7.svg&#39;;
+    import M8 from &#39;$libimages/Man8.svg&#39;;
+    import M9 from &#39;$libimages/Man9.svg&#39;;
+    
+    import P1 from &#39;$libimages/Pin1.svg&#39;;
+    import P2 from &#39;$libimages/Pin2.svg&#39;;
+    import P3 from &#39;$libimages/Pin3.svg&#39;;
+    import P4 from &#39;$libimages/Pin4.svg&#39;;
+    import P5 from &#39;$libimages/Pin5.svg&#39;;
+    import P6 from &#39;$libimages/Pin6.svg&#39;;
+    import P7 from &#39;$libimages/Pin7.svg&#39;;
+    import P8 from &#39;$libimages/Pin8.svg&#39;;
+    import P9 from &#39;$libimages/Pin9.svg&#39;;
+    
+    import S1 from &#39;$libimages/Sou1.svg&#39;;
+    import S2 from &#39;$libimages/Sou2.svg&#39;;
+    import S3 from &#39;$libimages/Sou3.svg&#39;;
+    import S4 from &#39;$libimages/Sou4.svg&#39;;
+    import S5 from &#39;$libimages/Sou5.svg&#39;;
+    import S6 from &#39;$libimages/Sou6.svg&#39;;
+    import S7 from &#39;$libimages/Sou7.svg&#39;;
+    import S8 from &#39;$libimages/Sou8.svg&#39;;
+    import S9 from &#39;$libimages/Sou9.svg&#39;;
+    
+    import Back from &#39;$libimages/Back.svg&#39;;
+    import Blank from &#39;$libimages/Blank.svg&#39;
+    
+    import Chun from &#39;$libimages/Chun.svg&#39;
+    import Haku from &#39;$libimages/Haku.svg&#39;
+    import Hatsu from &#39;$libimages/Hatsu.svg&#39;
+    
+    import Nan from &#39;$libimages/Nan.svg&#39;
+    import Pei from &#39;$libimages/Pei.svg&#39;
+    import Ton from &#39;$libimages/Ton.svg&#39;
+    import Shaa from &#39;$libimages/Shaa.svg&#39;
+    
+    var xyz = [M1,M2,M3,M4,M5,M6,M7,M8,M9,P1,P2,P3,P4,P5,P6,P7,P8,P9,S1,S2,S3,S4,S5,S6,S7,S8,S9,Chun,Haku,Hatsu,Nan,Pei,Ton,Shaa,M1,M2,M3,M4,M5,M6,M7,M8,M9,P1,P2,P3,P4,P5,P6,P7,P8,P9,S1,S2,S3,S4,S5,S6,S7,S8,S9,Chun,Haku,Hatsu,Nan,Pei,Ton,Shaa,M1,M2,M3,M4,M5,M6,M7,M8,M9,P1,P2,P3,P4,P5,P6,P7,P8,P9,S1,S2,S3,S4,S5,S6,S7,S8,S9,Chun,Haku,Hatsu,Nan,Pei,Ton,Shaa,M1,M2,M3,M4,M5,M6,M7,M8,M9,P1,P2,P3,P4,P5,P6,P7,P8,P9,S1,S2,S3,S4,S5,S6,S7,S8,S9,Chun,Haku,Hatsu,Nan,Pei,Ton,Shaa]
+    
+    var A = Array.from(Array(136).keys())
+    var B = A.slice();
+    B = shuffle(B);
+    var ARR = B.splice(0,14);   
+    var ARCHIVE = [ARR.slice()];
+    var ar69 = [];
+    var argo;
+    $:   argo = () =&gt; {return ar69.slice()};
+    ar69 = ar69;
+    let index = 0;
+
+    function shuf() {
+        B = A.slice()
+        B = shuffle(B);
+        ARR = B.splice(0,14);
+        ARCHIVE = [ARR];
+        index = 0;
+        draws = 0;
+        ar69 = [];
+        ARCHIVE = [ARR].slice();
+        return ARR; 
+    }
+
+    function back () {
+        if (index &gt; 0) {
+            index = index - 1;
+            ARR = ARCHIVE[index]
+        }
+    }
+    
+    function forward () {
+        if (index &lt; ARCHIVE.length - 1) {
+            index = index + 1; 
+            ARR = ARCHIVE[index]
+        };
+    }
+    
+    function sw (ar) {
+        ARR = ARR.slice();
+        var a, b, c, d;
+        [a,b,c,d] = ar;
+        if (a &lt; c) {
+            for (let i = a; i &lt; c; i+=1) {
+                ARR[i] = ARR[i+1]
+            }
+            ARR[c] = b;
+            index = index + 1;
+            ar69 = []; 
+        ARCHIVE.splice(ARCHIVE.length, 0, ARR.slice());
+        ARCHIVE = ARCHIVE.slice();
+        }
+        else if (a &gt; c) {
+            for (let i = a; i &gt; c; i-=1) {
+                ARR[i] = ARR[i-1]
+            }
+            ARR[c] = b;
+            index = index + 1;
+            ar69 = ar69;
+        ARCHIVE.splice(ARCHIVE.length, 0, ARR.slice());
+        ARCHIVE = ARCHIVE.slice();
+        setTimeout(() =&gt; ar69 = [], 300);
+        }
+        else if (a === c) {
+            // setTimeout(() =&gt; ar69 = [], 300);
+            getR();
+        } 
+        console.log(&quot;ARCHIVE is&quot;, ARCHIVE); 
+    }   
+    var ar69 = [];
+    
+    function sky (a) {
+        if (ar69.length === 0) ar69 = a
+        else if (ar69.length === 2) {
+                ar69 = ar69.concat(a);
+                if (ar69[0] === 13 &amp;&amp; ar69[2] === 13) {
+                    index = getR();
+                }
+                else if(ar69[0] === ar69[2]) {
+                    ARR[ar69[0]] = ARR[13];
+                    index = getR();
+                }
+                else if (ar69[0] &lt; 13 &amp;&amp; ar69[2] &lt; 13) sw(ar69)
+                else { console.log(&quot;FUBAR&quot;); shuf() }
+        }
+     };
+    
+    function getR() {
+        draws+=1
+        index = index + i;
+        ar69 = [];
+        ARR[13] = B.splice(0,1)[0];
+        ARR = ARR;
+        ARCHIVE.push(ARR.slice());
+        ARCHIVE = JSON.parse(JSON.stringify(ARCHIVE));
+        console.log(&quot;ARCHIVE is&quot;, ARCHIVE); 
+        return index;
+    }
+    </pre>
+&gt;</div>
+
+
+		<script type="module" data-hydrate="c0s1xp">
+		import { start } from "/_app/start-b6a591d0.js";
+		start({
+			target: document.querySelector('[data-hydrate="c0s1xp"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-31f91b2d.js"),
+						import("/_app/pages/Mahjong/__layout.svelte-67e84b7b.js"),
+						import("/_app/pages/Mahjong/time.svelte-8c2d04f6.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Basic Monad</title>
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b6adefe3.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Functions/__layout.svelte-45d8fac8.css">
+	<link rel="stylesheet" href="/_app/assets/pages/Functions/Monads/__layout.svelte-ed3bdd87.css">
+	<link rel="modulepreload" href="/_app/start-b6a591d0.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-7ab9b2a4.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-31f91b2d.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/__layout.svelte-c22d6533.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/Monads/__layout.svelte-880bf17c.js">
+	<link rel="modulepreload" href="/_app/pages/Functions/Monads/Monad.svelte-1f05996a.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		}
+	</script>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+
+	</head>
+	
+	<body>
+		<div id="svelte" >
+
+
+<div><nav><ul class="svelte-1ofk2mc"><li class="svelte-1ofk2mc"><a href="/">Home</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Functions">Functions</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Mahjong">Riichi Mahjong</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Grammar">Grammar</a></li>
+
+    <li class="svelte-1ofk2mc"><a href="/Law">Rule By Law</a></li></ul></nav></div>
+
+
+<div></div>
+<div class="container svelte-1ofk2mc"><br>
+<div style="font-size: 26px">Functions</div>
+
+
+<nav><ul class="svelte-14w1mcn"><li class="svelte-14w1mcn"><a href="/Functions/" class="svelte-14w1mcn">Home</a></li>
+
+        <li class="svelte-14w1mcn"><a href="/Functions/haskell" class="svelte-14w1mcn">Haskell</a></li>
+
+      	<li class="svelte-14w1mcn"><a href="/Functions/bitmask_prime_generator" class="svelte-14w1mcn">Primes</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/factors" class="svelte-14w1mcn">Factors</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/proxy" class="svelte-14w1mcn">Proxies</a></li>
+
+        <li class="svelte-14w1mcn"><a class="large svelte-14w1mcn" href="/Functions/Monads">Monads</a></li>
+
+        <li class="svelte-14w1mcn"><a class="large svelte-14w1mcn" href="/Functions/Binary_Operations">Binary</a></li>
+
+		<li class="svelte-14w1mcn"><a href="/Functions/score" class="svelte-14w1mcn">Score</a></li></ul></nav>
+
+
+<br>
+<div style="font-size: 26px">Monads</div>
+
+
+<nav><ul class="svelte-1e9oi5x"><li class="svelte-1e9oi5x"><a href="/Functions/Monads/" class="svelte-1e9oi5x">Home</a></li>
+
+      	<li class="svelte-1e9oi5x"><a href="/Functions/Monads/Monad" class="svelte-1e9oi5x">Monads</a></li>
+
+		<li class="svelte-1e9oi5x"><a href="/Functions/Monads/Monad0" class="svelte-1e9oi5x">A Simple Monad</a></li>
+
+		<li class="svelte-1e9oi5x"><a href="/Functions/Monads/ObjectMonad" class="svelte-1e9oi5x">Object Monads</a></li>
+
+        <li class="svelte-1e9oi5x"><a href="/Functions/Monads/Async_monad" class="svelte-1e9oi5x">Async Monad</a></li>
+
+        <li class="svelte-1e9oi5x"><a href="/Functions/Monads/game" class="svelte-1e9oi5x">Score</a></li></ul></nav>
+
+
+
+
+<div style="font-family: Times New Roman; text-align: center; font-size: 38px;"><p></p>
+BASIC MONAD
+</div>
+<br>
+
+<p>Forcing JavaScript to adhere to strict typing rules probably helps large development teams speed up the process of getting large, complicated applications into production. It might also be soothing to people who feel secure in highly structured environments. But here, we let JavaScript shine with only a few, common-sense rules such as, &quot;make the code easy for future maintainers to understand&quot;  and &quot;each global variable is to be altered by no more than one function.&quot; </p>
+<p>That doesn&#39;t mean there is a dearth of variety. As you will see in later modules, there&#39;s a monad that handles data from a WebSocket server and a Web Worker, one that handles Promises, another that serves as a transducer, and so on.  </p>
+<p>Here&#39;s a basic design pattern; it&#39;s the definition of a very simple monad:</p>
+<pre>function M (defaultArg = [])  {  
+    var ar = defaultArg.slice(); // clones the argument
+    return (function run (x) {
+        if (typeof x !== &quot;undefined&quot;) ar.push(x); 
+        return function f (func) {
+            if (func === &quot;end&quot;) return ar.slice();
+            else return run(func(x));
+        };
+    })(ar.pop());
+}</pre>
+<p>&quot;M()&quot; returns &quot;run()&quot; which returns &quot;f&quot;. M() holds the array (&quot;ar&quot;) that can be augmented and manipulated by run(). If run() returns f() in front of a function, f()&#39;s argument &quot;func&quot; (normally a function) is applied to run()&#39;s argument, which is the return value of the previous &quot;func&quot; applied to the previous value of &quot;x&quot;.</p>
+<p>Until the last function (&quot;func&quot;) in a chain evaluates the return value of the most recent &quot;func(x)&quot;, recursion is automatic. The array &quot;ar&quot; grows during each cycle in which func(x) does not return null, NaN, or undefined. Whenever func === &quot;end&quot;, ar is returned, but that does not end a chain of computations. As shown below, ar can be used in computations.</p>
+
+<pre>mon = M();
+
+var result = mon(()=&gt;3)(x=&gt;x*x*x)(x=&gt;x*x)(x=&gt;x/mon(&quot;end&quot;)[0]**2)
+(Math.sqrt)(x=&gt;mon(&quot;end&quot;)[1]+x)(x=&gt;x+2*mon(&quot;end&quot;)[0])(&quot;end&quot;)
+
+console.log(result)  // [3, 27, 729, 81, 9, 36, 42]</pre>
+
+<p>Note that both &quot;mon = M([3])&quot; and &quot;mon = M()(()=&gt;3)&quot; have the same effect. They initialize the closure array making &quot;ar === [3]&quot; true.</p>
+<p>Now I think the Promises monad will be easier to understand. It follows the same basic pattern with a new name for &quot;M&quot;: Mona() returns run(), and run returns f(). The array that was previously held in &quot;M()&quot; is now stored externally in objects A and B; more precisely, in A[sym1], A[sym2], A[sym3], B[sym1], B[sym2], and B[sym3] where sym1, sym2, and sym3 are symbols. The Promises module features branching and resuming chains and a global lock named &quot;lok&quot; to prevent A and B from clashing. Check it out:</p>
+<a href="http://blog.schalk.site/Monad3">Promises Monad</a> 
+
+<p>Here are some definitions:  </p>
+<pre>const sym1 = Symbol(&#39;sym1&#39;);
+const sym2 = Symbol(&#39;sym2&#39;);
+const sym3 = Symbol(&#39;sym3&#39;);
+
+let B = {};
+B[sym1] = [];
+B[sym2] = [];
+B[sym3] = [];
+
+const  Mona = function Mona ( AR = [],  ar = &quot;name&quot; )  {  
+  let p, run, f;
+  B[ar] = AR.slice();
+  return run = (function run (x) {
+  if (x instanceof Promise) {x.then(y =&gt; {
+    if (!( typeof y === &quot;function&quot; || y == lok || y == NaN || 
+        typeof y == &quot;undefined&quot; ))   {B[ar] = B[ar].concat(y)}
+    else if (typeof x !== &quot;function&quot; &amp;&amp; x != lok  &amp;&amp;  typeof x !== &quot;undefined&quot;
+       &amp;&amp; x != NaN  &amp;&amp; !(x instanceof Promise)) {B[ar] = B[ar].concat(x);
+  }})}
+    f = function f (func) {
+      if (func === &#39;halt&#39; || func === &#39;h&#39; || func == undefined ||
+        typeof func == &quot;undefined&quot; || func == NaN ) {
+        B[ar] = B[ar]; 
+        return B[ar].slice();
+      }
+      if (typeof func == &quot;function&quot; &amp;&amp; x instanceof Promise) p = x.then(v =&gt; func(v))
+      else if (typeof func != &quot;function&quot; &amp;&amp; x instanceof Promise) p = x.then(v =&gt; v)
+      else if (typeof func != &quot;function&quot;) p = func
+      else p = func(x);
+      return run(p);
+    };
+    return f;
+  })( B[ar].slice(-1)[0]);
+}</pre></div>
+
+
+		<script type="module" data-hydrate="1tngxnj">
+		import { start } from "/_app/start-b6a591d0.js";
+		start({
+			target: document.querySelector('[data-hydrate="1tngxnj"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-31f91b2d.js"),
+						import("/_app/pages/Functions/__layout.svelte-c22d6533.js"),
+						import("/_app/pages/Functions/Monads/__layout.svelte-880bf17c.js"),
+						import("/_app/pages/Functions/Monads/Monad.svelte-1f05996a.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
